@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Portfolio Holdings
+title: Actual vs Budget
 parent: Report Pages
 nav_order: 9
 ---
 
-# Portfolio Holdings
+# actual-vs-budget
 
 Detailed documentation for this report page will be added here.

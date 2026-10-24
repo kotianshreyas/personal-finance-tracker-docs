@@ -7,15 +7,6 @@ nav_order: 1
 
 # Portfolio Holdings
 
----
-layout: default
-title: Portfolio Holdings
-parent: Report Pages
-nav_order: 1
----
-
-# Portfolio Holdings
-
 The **Portfolio Holdings** page provides a detailed view of individual investments and their performance.
 
 It is designed to answer three basic questions:

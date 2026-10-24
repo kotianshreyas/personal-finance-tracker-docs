@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Portfolio Holdings
+title: Cash Flow
 parent: Report Pages
 nav_order: 6
 ---
 
-# Portfolio Holdings
+# cash-flow
 
 Detailed documentation for this report page will be added here.

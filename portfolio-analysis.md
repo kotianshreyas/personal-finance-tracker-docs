@@ -51,11 +51,11 @@ For example, an ROI of 40% means that the current holdings have generated econom
 
 ---
 
-# Performance view
+## Performance view
 
 The **Performance** chart compares the size and performance of investments currently held in the portfolio.
 
-## Horizontal axis — Portfolio Weight
+### Horizontal axis — Portfolio Weight
 
 The horizontal axis shows the percentage of the portfolio represented by each investment.
 
@@ -68,7 +68,7 @@ For example:
 
 Portfolio weight helps identify concentration risk and determines how materially an individual investment can affect total portfolio results.
 
-## Vertical axis — Annualized Return
+### Vertical axis — Annualized Return
 
 The vertical axis shows the investment's annualized return.
 
@@ -80,7 +80,7 @@ Investments below the **0% line** have generated a negative annualized return.
 
 The shaded area below zero visually highlights investments with negative annualized performance.
 
-## Bubble size — Market Value
+### Bubble size — Market Value
 
 Bubble size represents the investment's **current market value**.
 
@@ -90,7 +90,7 @@ This helps visually emphasize investments that have a larger financial impact on
 
 > Portfolio Weight and Market Value are related, but they provide different visual cues. Portfolio Weight determines the investment's horizontal position, while Market Value determines bubble size.
 
-## Bubble colour — Current Trend
+### Bubble colour — Current Trend
 
 Bubble colour represents the investment's current price trend:
 
@@ -106,7 +106,7 @@ An investment can therefore have a **green bubble** but still be classified as *
 
 ---
 
-# Holding Age view
+## Holding Age view
 
 The **Holding Age** chart provides another way to analyze the same investments.
 
@@ -118,7 +118,7 @@ It uses the same:
 
 However, the horizontal axis changes from Portfolio Weight to **Holding Age**.
 
-## Horizontal axis — Holding Age
+### Horizontal axis — Holding Age
 
 Holding Age represents the number of months the investment has been held.
 
@@ -135,7 +135,7 @@ Holding age provides important context because the same return may have a differ
 
 ---
 
-# Using the tooltips
+## Using the tooltips
 
 Hover over any bubble to see additional information about the investment.
 
@@ -156,11 +156,11 @@ The tooltip allows detailed information to be reviewed without adding excessive 
 
 ---
 
-# Investment analysis table
+## Investment analysis table
 
 The table below the chart provides detailed information for each investment.
 
-## Review
+### Review
 
 The **Review** column provides an overall attention signal.
 
@@ -183,27 +183,27 @@ These factors include characteristics such as:
 
 Because Review considers several factors, it may differ from the bubble colour.
 
-## Symbol
+### Symbol
 
 The investment's ticker, fund code, or identifying symbol.
 
-## Investment
+### Investment
 
 The full investment or security name.
 
-## Weight
+### Weight
 
 The investment's current percentage of the portfolio.
 
 Higher weights indicate greater portfolio concentration and a larger potential impact on overall results.
 
-## Mkt Value
+### Mkt Value
 
 The current estimated market value of the holding.
 
 This is also the measure used to determine bubble size in both analysis charts.
 
-## ROI
+### ROI
 
 The cumulative **Return on Investment (ROI)** for the holding.
 
@@ -211,13 +211,13 @@ ROI measures the total economic gain relative to total investment cost.
 
 Unlike Annualized Return, ROI does not adjust for the amount of time the investment has been held.
 
-## Ann. Return
+### Ann. Return
 
 The annualized return for the holding.
 
 This makes investments held for different lengths of time easier to compare.
 
-## Trend
+### Trend
 
 The current price-trend classification:
 
@@ -227,25 +227,25 @@ The current price-trend classification:
 
 This is the same classification represented by bubble colour.
 
-## vs 50D
+### vs 50D
 
 Shows the investment's current price relative to its approximately **50-day reference level**.
 
 This provides an indication of shorter-term price momentum.
 
-## vs 200D
+### vs 200D
 
 Shows the investment's current price relative to its approximately **200-day reference level**.
 
 This provides a longer-term trend comparison.
 
-## vs 52W-H
+### vs 52W-H
 
 Shows the current price relative to the investment's **52-week high**.
 
 A substantially negative value means the investment is trading well below its highest price over the past year.
 
-## Insight
+### Insight
 
 The Insight column briefly explains why the investment received its current Review classification.
 
@@ -260,25 +260,25 @@ This provides a quick interpretation without requiring the user to evaluate ever
 
 ---
 
-# Filters
+## Filters
 
 The page contains filters that allow the analysis to be narrowed to specific investments.
 
 Depending on the current report configuration, these may include:
 
-## Price Source
+### Price Source
 
 Controls which available pricing source is used for investment valuation and market-based calculations.
 
-## Financial Institution
+### Financial Institution
 
 Limits the analysis to investments associated with a selected financial institution.
 
-## Purpose
+### Purpose
 
 Filters investments based on the financial purpose assigned to the account or holding.
 
-## Review
+### Review
 
 Filters investments according to their Review classification.
 
@@ -286,31 +286,31 @@ For example, selecting **Review** can be used to focus only on investments that 
 
 ---
 
-# How to interpret the page
+## How to interpret the page
 
 Rather than focusing on a single metric, use the page to evaluate investments from several perspectives.
 
-### Large holding + negative return
+#### Large holding + negative return
 
 A large position with a negative annualized return may deserve closer review because it can materially affect total portfolio performance.
 
-### Small holding + negative return
+#### Small holding + negative return
 
 A very small position may have poor performance but have limited impact on the total portfolio.
 
-### Strong trend + poor historical performance
+#### Strong trend + poor historical performance
 
 An investment may currently have a Strong Trend while still having a negative annualized return.
 
 This can indicate that the investment is recovering even though its longer-term holding-period performance remains weak.
 
-### Long holding period + weak return
+#### Long holding period + weak return
 
 A holding that has been owned for several years but continues to produce weak annualized results may deserve more attention than a recently purchased investment experiencing short-term volatility.
 
 ---
 
-# Key distinction: Trend vs Review
+## Key distinction: Trend vs Review
 
 Two different concepts are intentionally shown on this page.
 
@@ -333,7 +333,7 @@ This is not contradictory. It means recent market momentum is positive, but anot
 
 ---
 
-# Practical use
+## Practical use
 
 The Portfolio Analysis page can be used to:
 

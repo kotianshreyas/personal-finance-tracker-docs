@@ -5,6 +5,6 @@ parent: Report Pages
 nav_order: 12
 ---
 
-# contribution-tracker
+# Contribution Tracker
 
 Detailed documentation for this report page will be added here.

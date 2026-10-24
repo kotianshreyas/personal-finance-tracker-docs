@@ -5,6 +5,6 @@ parent: Report Pages
 nav_order: 5
 ---
 
-# balance-sheet
+# Balance Sheet
 
 Detailed documentation for this report page will be added here.

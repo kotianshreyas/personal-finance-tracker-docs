@@ -5,6 +5,6 @@ parent: Report Pages
 nav_order: 11
 ---
 
-# spending-insights
+# Spending Insights
 
 Detailed documentation for this report page will be added here.

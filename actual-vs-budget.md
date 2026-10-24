@@ -5,6 +5,6 @@ parent: Report Pages
 nav_order: 9
 ---
 
-# actual-vs-budget
+# Actual vs Budget
 
 Detailed documentation for this report page will be added here.

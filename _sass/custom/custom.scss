@@ -1,6 +1,8 @@
+// The default layout nests page content inside main; support both layouts.
 // Keep only the page title sticky within the main content column.
 // Theme colors preserve the current color scheme and cover scrolling text.
-.main-content > h1:first-of-type {
+.main-content > h1:first-of-type,
+.main-content > main > h1:first-of-type {
   position: sticky;
   top: 0;
   z-index: 1;
@@ -13,7 +15,8 @@
 
 // Printed pages should retain the normal document flow.
 @media print {
-  .main-content > h1:first-of-type {
+  .main-content > h1:first-of-type,
+  .main-content > main > h1:first-of-type {
     position: static;
   }
 }

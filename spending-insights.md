@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Portfolio Holdings
+title: Spending Insights
 parent: Report Pages
 nav_order: 11
 ---
 
-# Portfolio Holdings
+# spending-insights
 
 Detailed documentation for this report page will be added here.

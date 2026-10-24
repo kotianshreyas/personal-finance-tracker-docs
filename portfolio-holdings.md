@@ -77,21 +77,21 @@ This distinction is important.
 
 ---
 
-# Holdings table
+## Holdings table
 
 Each row represents an investment identified by its symbol.
 
-## Symbol
+### Symbol
 
 The ticker, fund code, or other identifying symbol assigned to the investment.
 
 Examples may include publicly traded stock symbols, exchange-traded fund symbols, or mutual-fund codes.
 
-## Name
+### Name
 
 The full name of the investment.
 
-## Price
+### Price
 
 The price currently being used to value one unit of the investment.
 
@@ -99,7 +99,7 @@ The value depends on the selected **Price Source**.
 
 When **Live** is selected, the model uses the available current market price. Where a live price is unavailable, the model can fall back to the latest available portfolio snapshot price.
 
-## Qty
+### Qty
 
 The number of units currently held.
 
@@ -107,7 +107,7 @@ For active investments, this represents the remaining quantity owned.
 
 A fully exited investment will normally have no remaining quantity.
 
-## Invested
+### Invested
 
 **Invested** represents the cumulative purchase cost attributed to the investment.
 
@@ -129,7 +129,7 @@ This treatment allows the report to preserve both parts of the story:
 - the investment successfully generated $1,000 of income; and
 - that income was subsequently invested again.
 
-## Yield
+### Yield
 
 Yield shows the cumulative cash returned by the investment.
 
@@ -142,7 +142,7 @@ It may include:
 
 Because sale proceeds are included, an investment that has been fully exited can have a large Yield even though its current market value is zero.
 
-### Example
+#### Example
 
 Suppose:
 
@@ -157,7 +157,7 @@ Yield would be:
 
 The investment has therefore returned $8,000 of cash while still retaining $4,000 of market value.
 
-## Unrealized
+### Unrealized
 
 Unrealized shows the gain or loss associated with the remaining market value of the investment.
 
@@ -165,7 +165,7 @@ If an investment has been fully exited, its remaining market value is zero and i
 
 The final investment result is therefore better understood using **Return** and **ROI** rather than looking at Unrealized alone.
 
-## Mkt. Value
+### Mkt. Value
 
 **Market Value** represents the estimated current value of the remaining investment:
 
@@ -173,7 +173,7 @@ The final investment result is therefore better understood using **Return** and 
 
 A fully exited investment has no remaining market value.
 
-## Return
+### Return
 
 Return shows the investment's total dollar gain or loss.
 
@@ -183,7 +183,7 @@ Conceptually:
 
 It therefore captures both realized and unrealized components of investment performance.
 
-### Example
+#### Example
 
 Suppose:
 
@@ -203,7 +203,7 @@ The investment has generated $3,000 of total economic gain.
 
 ---
 
-# ROI
+## ROI
 
 **Return on Investment (ROI)** expresses the cumulative Return as a percentage of cumulative Invested cost.
 
@@ -226,7 +226,7 @@ It does not consider how long the investment has been held.
 
 ---
 
-## Reinvested income and ROI
+### Reinvested income and ROI
 
 Reinvested income deserves special attention when interpreting ROI.
 
@@ -259,7 +259,7 @@ Therefore, ROI should be interpreted together with Yield and Return rather than 
 
 ---
 
-# Ann. Return
+## Ann. Return
 
 **Ann. Return** represents the investment's annualized return.
 
@@ -278,7 +278,7 @@ Both have the same cumulative ROI, but Investment A produced that return much fa
 
 Their annualized returns will therefore be significantly different.
 
-### ROI vs Annualized Return
+#### ROI vs Annualized Return
 
 Use **ROI** when asking:
 
@@ -292,17 +292,17 @@ Both measures provide useful but different information.
 
 ---
 
-# Active and exited investments
+## Active and exited investments
 
 The **Holding Status** filter allows investments to be viewed according to whether they are still owned.
 
-## Active
+### Active
 
 An investment is considered **Active** when units remain in the portfolio.
 
 Use this view when evaluating the performance and value of the **current portfolio**.
 
-## Exited
+### Exited
 
 An investment is considered **Exited** when the remaining quantity is effectively zero.
 
@@ -316,7 +316,7 @@ For an exited investment:
 - Return shows the final economic gain or loss
 - ROI shows the cumulative historical result
 
-## All
+### All
 
 Displays both active and exited investments.
 
@@ -324,17 +324,17 @@ This is useful when reviewing the complete investment history rather than only t
 
 ---
 
-# Price Source
+## Price Source
 
 The **Price Source** filter controls which price is used to value active holdings.
 
-## Live
+### Live
 
 Uses the current available market price where possible.
 
 If a live market price is unavailable for a particular investment, the model uses the available portfolio snapshot price as a fallback.
 
-## AceMoney
+### AceMoney
 
 Uses the price stored in the portfolio snapshot.
 
@@ -342,33 +342,33 @@ This allows current calculated valuations to be compared with the portfolio valu
 
 ---
 
-# Other filters
+## Other filters
 
-## Account Name
+### Account Name
 
 Limits the table to investments associated with selected investment accounts.
 
-## Financial Institution
+### Financial Institution
 
 Limits the analysis to investments held through a particular financial institution.
 
-## Owner
+### Owner
 
 Filters investments according to the assigned account owner.
 
-## Purpose
+### Purpose
 
 Filters investments according to the financial purpose assigned to their account.
 
 This can help distinguish investments intended for purposes such as retirement, education, home purchase, emergency savings, or other financial goals.
 
-## Gain / Loss
+### Gain / Loss
 
 Allows investments to be narrowed according to whether their investment performance represents a gain or loss.
 
 This is useful for quickly isolating investments that may require further review.
 
-## Show Top/Bottom 10
+### Show Top/Bottom 10
 
 Provides a faster way to focus on the strongest or weakest investment results.
 
@@ -382,7 +382,7 @@ The ranking is based on the investment's ROI within the current filter context.
 
 ---
 
-# Reading an active investment
+## Reading an active investment
 
 For an active investment, consider the columns together.
 
@@ -410,7 +410,7 @@ The annualized return then provides additional context by considering how long i
 
 ---
 
-# Reading an exited investment
+## Reading an exited investment
 
 Suppose an investment shows:
 
@@ -436,7 +436,7 @@ This is why exited investments can still be useful for historical performance an
 
 ---
 
-# Total row
+## Total row
 
 The total row summarizes the holdings currently included by the page filters.
 
@@ -450,7 +450,7 @@ This distinction matters because larger investments have a greater economic impa
 
 ---
 
-# Practical uses
+## Practical uses
 
 The Portfolio Holdings page can be used to:
 

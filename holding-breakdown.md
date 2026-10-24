@@ -17,7 +17,7 @@ The page is designed primarily as a **drill-through page**. This means it normal
 
 ---
 
-# Opening the page
+## Opening the page
 
 The most useful way to access Holding Breakdown is through **Drill through** from an investment elsewhere in the report.
 
@@ -34,7 +34,7 @@ This allows the page to focus specifically on that security without requiring th
 
 ---
 
-# Selected investment context
+## Selected investment context
 
 Once the page is opened through drill-through, the selected symbol becomes the context for the page.
 
@@ -46,11 +46,11 @@ For example, if **RY — Royal Bank of Canada** is selected before drilling thro
 
 ---
 
-# Portfolio position
+## Portfolio position
 
 One of the key purposes of this page is to show how significant the selected investment is relative to the entire portfolio.
 
-## Selected Investment
+### Selected Investment
 
 Represents the current market value of the investment being examined.
 
@@ -60,7 +60,7 @@ Conceptually:
 
 **Selected Investment Value = Quantity Held × Selected Price**
 
-## Rest of Portfolio
+### Rest of Portfolio
 
 Represents the combined market value of all other investments in the portfolio.
 
@@ -72,7 +72,7 @@ Together, these two values make up the full investment portfolio.
 
 ---
 
-# Portfolio share visual
+## Portfolio share visual
 
 The portfolio comparison visual divides the portfolio into:
 
@@ -81,7 +81,7 @@ The portfolio comparison visual divides the portfolio into:
 
 This provides an immediate visual indication of how concentrated the portfolio is in the selected security.
 
-### Example
+#### Example
 
 Suppose:
 
@@ -99,7 +99,7 @@ The visual would therefore show approximately:
 
 ---
 
-# Portfolio Weight
+## Portfolio Weight
 
 Portfolio Weight expresses the selected investment's current market value as a percentage of the total investment portfolio.
 
@@ -109,7 +109,7 @@ Conceptually:
 
 This is useful because the same investment performance can have very different consequences depending on position size.
 
-### Example
+#### Example
 
 Consider two investments that both decline by 20%.
 
@@ -127,7 +127,7 @@ Portfolio Weight therefore provides context for investment risk and concentratio
 
 ---
 
-# Why portfolio concentration matters
+## Why portfolio concentration matters
 
 A large investment is not automatically undesirable.
 
@@ -151,17 +151,17 @@ Both questions matter.
 
 ---
 
-# Price Source
+## Price Source
 
 Where available, the page uses the same **Price Source** logic as the rest of the portfolio report.
 
-## Live
+### Live
 
 Uses the current available market price.
 
 If a live market price is unavailable for an investment, the model can use the available portfolio snapshot price as a fallback.
 
-## AceMoney
+### AceMoney
 
 Uses the investment price recorded in the portfolio snapshot.
 
@@ -174,7 +174,7 @@ Because the selected investment value and the total portfolio value both depend 
 
 ---
 
-# Understanding selected pricing
+## Understanding selected pricing
 
 The portfolio comparison is based on the **selected pricing method** rather than mixing valuation sources.
 
@@ -190,7 +190,7 @@ This keeps the selected investment and the rest of the portfolio comparable.
 
 ---
 
-# Relationship with Portfolio Holdings
+## Relationship with Portfolio Holdings
 
 The **Portfolio Holdings** page answers:
 
@@ -206,7 +206,7 @@ Use Holding Breakdown when one particular investment deserves closer examination
 
 ---
 
-# Relationship with Portfolio Analysis
+## Relationship with Portfolio Analysis
 
 The **Portfolio Analysis** page is designed for screening and comparison.
 
@@ -227,7 +227,7 @@ A typical workflow is therefore:
 
 ---
 
-# Example interpretation
+## Example interpretation
 
 Suppose an investment has:
 
@@ -252,7 +252,7 @@ A 16.7% position with strong long-term performance may have a very different int
 
 ---
 
-# What the page does not tell you
+## What the page does not tell you
 
 Portfolio Weight measures **concentration**, not investment quality.
 
@@ -277,7 +277,7 @@ The page should therefore be used as an **analytical tool**, not as an automated
 
 ---
 
-# Practical uses
+## Practical uses
 
 The Holding Breakdown page can be used to:
 

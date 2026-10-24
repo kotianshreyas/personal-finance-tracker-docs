@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Portfolio Holdings
+title: Holding Breakdown
 parent: Report Pages
 nav_order: 2
 ---
 
-# Portfolio Holdings
+# holding-breakdown
 
 Detailed documentation for this report page will be added here.

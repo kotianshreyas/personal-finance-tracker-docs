@@ -7,6 +7,8 @@ nav_order: 3
 
 # Portfolio Analysis
 
+![Portfolio Analysis page]({{ site.baseurl }}/assets/images/portfolio-analysis.png)
+
 The **Portfolio Analysis** page helps identify which current investments are performing well, which may require attention, and how important each holding is within the overall portfolio.
 
 The page combines return, portfolio weight, holding age, market value, price trend, and review indicators into one analytical view.

@@ -1,0 +1,14 @@
+/* Keep each documentation page title visible while scrolling */
+.main-content h1:first-of-type {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  background: $body-background-color;
+
+  margin-top: 0;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+
+  border-bottom: 1px solid $border-color;
+}

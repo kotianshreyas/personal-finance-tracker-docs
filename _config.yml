@@ -1,7 +1,7 @@
 title: Personal Finance Tracker
 description: User guide and methodology for the Personal Finance Tracker Power BI project.
 
-remote_theme: just-the-docs/just-the-docs
+theme: just-the-docs
 
 url: "https://kotianshreyas.github.io"
 baseurl: "/personal-finance-tracker-docs"
@@ -16,6 +16,3 @@ aux_links:
     - "https://github.com/kotianshreyas/personal-finance-tracker-docs"
 
 footer_content: "Personal Finance Tracker — Power BI User Guide and Methodology"
-
-plugins:
-  - jekyll-remote-theme

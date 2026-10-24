@@ -7,15 +7,6 @@ nav_order: 2
 
 # Holding Breakdown
 
----
-layout: default
-title: Holding Breakdown
-parent: Report Pages
-nav_order: 2
----
-
-# Holding Breakdown
-
 The **Holding Breakdown** page provides a focused view of an individual investment.
 
 Unlike the Portfolio Holdings page, which compares many investments at once, Holding Breakdown is intended to answer:

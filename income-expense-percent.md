@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Portfolio Holdings
+title: Income Expense
 parent: Report Pages
 nav_order: 8
 ---
 
-# Portfolio Holdings
+# income-expense
 
 Detailed documentation for this report page will be added here.

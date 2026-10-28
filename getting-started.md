@@ -6,82 +6,127 @@ nav_order: 2
 
 # Getting Started
 
-This guide explains how to navigate and use the Personal Finance Tracker Power BI report.
+The **Personal Finance Tracker** brings household finances, investments, savings, cash flow, budgets, and financial goals together in one Power BI report.
 
-## Purpose of the report
+The report is designed to answer practical questions such as:
 
-The Personal Finance Tracker brings investment information and personal financial activity into one analytical model. It is designed to help users understand:
+- What do I currently own?
+- What do I owe?
+- What is my net worth?
+- How are my investments performing?
+- Where is my income going?
+- Am I staying within budget?
+- Will I have enough accessible cash over the next few months?
+- How much registered-plan contribution room remains?
+- Am I progressing toward my financial goals?
 
-- current investment holdings and performance
-- portfolio concentration and investment trends
-- assets, liabilities, and net worth
-- cash flow and future cash projections
-- income and spending patterns
-- budget performance
-- registered-account contributions and available room
+## Main report navigation
 
-## Navigating the report
+The Power BI Home page provides direct access to the major report areas.
 
-The report is organized into several pages, each focused on a particular area of personal finance.
+Most report pages also include a **Home** button in the upper-right corner.
 
-Use the navigation buttons on the report Home Page or the page tabs to move between sections.
+Select it to return to the main Power BI menu.
 
-### Common controls
+## Dates matter
 
-**Home**
-
-Returns to the main report Home Page.
-
-**Reset**
-
-Restores the page to its default filter and selection state.
-
-**Filter**
-
-Shows or hides the page's filter controls.
-
-**Slicers**
-
-Allow the report to be narrowed to specific accounts, financial institutions, purposes, dates, investment classifications, or other relevant dimensions.
-
-## Interacting with visuals
-
-Most Power BI visuals are interactive.
-
-### Select a data point
-
-Clicking a bar, bubble, row, or other data point may filter or highlight related information elsewhere on the page.
-
-### Hover for additional information
-
-Hover over a data point to display a tooltip containing additional measures and context.
-
-### Clear a selection
-
-Click the selected item again or click an empty area of the visual.
-
-## Dates shown in the report
-
-Different parts of the report may use different dates depending on their purpose.
+Different pages answer different questions, so the dates displayed on them may not always be identical.
 
 For example:
 
-- transaction-based pages use the latest available transaction data
-- investment valuations may use the latest available market price
-- cash-flow projections distinguish completed historical months from projected future months
+- transaction-based pages reflect recorded transactions;
+- investment pages can use recently refreshed market prices;
+- Balance Sheet describes financial position at a selected date;
+- Cash Flow can include future projected months.
 
-Always review the date shown near the top of a report page before interpreting the results.
+Always check the date shown near the top of the page before interpreting a result.
 
-## Actual versus projected values
+## Price Source
 
-Some pages, particularly **Cash Flow**, combine historical actual information with future estimates.
+Some investment-related pages include a **Price Source** filter.
 
-Actual values are derived from recorded transactions and account balances.
+When current pricing is selected, the report uses the available refreshed investment prices.
 
-Projected values are calculated using budget assumptions, expected income, recurring deductions, and other forecasting logic.
+Not every investment has the same type of market-price availability.
 
-Projected values should therefore be interpreted as planning estimates rather than guaranteed future outcomes.
+Some investments may update less frequently than publicly traded shares or exchange-traded funds.
 
-## Next step
+## Filters
 
-Use the navigation menu to explore the documentation for each report page.
+Different pages provide different filters.
+
+Examples include:
+
+- Date;
+- Owner;
+- Account;
+- Financial Institution;
+- Account Type;
+- Purpose;
+- Holding Status;
+- Gain / Loss;
+- Review;
+- Price Source.
+
+Filters affect the information displayed on the current page.
+
+When a filtered result looks unexpectedly different from the total household result, first check which filters are active.
+
+## Reset
+
+Pages that include a **Reset** control can use it to return the page to its normal starting view.
+
+## Expandable tables
+
+Some tables contain a hierarchy.
+
+A **+** symbol indicates that additional detail is available.
+
+For example, you may be able to expand:
+
+**Financial Institution → Account → Investment**
+
+or:
+
+**Category → Subcategory**
+
+## Drill-through
+
+Some report items can be opened in a more detailed view.
+
+Examples include:
+
+- Holding Breakdown;
+- Category Detail.
+
+A drill-through page keeps the selected item as context so that the detail relates specifically to what you selected.
+
+## Colours
+
+Colours are used to make results easier to identify.
+
+Typical examples include:
+
+- green for positive or favourable results;
+- red for negative or unfavourable results;
+- orange for items requiring attention;
+- blue for headings, selections, totals, or neutral information.
+
+Always interpret colour together with the label and context of the visual.
+
+## Recommended review sequence
+
+For a broad household financial review, a useful sequence is:
+
+1. **Balance Sheet** — understand overall financial position.
+2. **Investment Overview** — understand how investment assets are organized.
+3. **Portfolio Holdings** — review individual investments.
+4. **Portfolio Analysis** — identify investments that may require closer attention.
+5. **Income & Expenses** — understand recent financial activity.
+6. **Actual vs Budget** — compare actual behaviour with the plan.
+7. **Cash Flow** — review upcoming cash availability.
+8. **Contribution Tracker** — review registered-plan contribution activity.
+
+There is no requirement to use the pages in this order.
+
+For a specific question, open the relevant page directly.

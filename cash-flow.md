@@ -7,64 +7,208 @@ nav_order: 6
 
 # Cash Flow
 
-The **Cash Flow** page helps explain cash movement and future cash availability.
+The **Cash Flow** page shows how money moves through the household and estimates how much accessible cash may remain over upcoming months.
 
-As described in Getting Started, this page combines historical actual information with future estimates. Read those two parts separately: recorded activity describes what happened, while projections describe what may happen under the assumptions used.
+It combines:
 
-## Cash inflows and outflows
+- recent actual activity;
+- expected income;
+- deductions;
+- credit-card payments;
+- other cash movements;
+- account transfers;
+- future projections.
 
-Cash inflows increase the cash available within the selected scope. Cash outflows reduce it.
+The heading identifies which months contain actual results and which months contain projections.
 
-A useful reconciliation is:
+## Why cash flow is different from net worth
 
-**Closing Cash = Opening Cash + Inflows − Outflows**
+A household can have a high net worth and still have limited accessible cash.
 
-This is a reading aid for cash movement. The exact categories included in a displayed measure depend on that measure's scope and label.
+For example, money invested for retirement contributes to net worth but may not be intended for everyday spending.
 
-## Cash flow versus income and expenses
+Cash Flow therefore focuses on:
 
-Cash movement and financial performance are related, but they are not interchangeable.
+> **How much spendable cash is expected to be available?**
 
-Moving money between two included accounts changes its location without creating income. Buying an investment uses cash while acquiring an asset. Loan proceeds increase cash but also create a liability.
+rather than:
 
-Before interpreting a large movement, investigate whether it represents ordinary income or spending, a transfer, an investment transaction, or borrowing.
+> **How wealthy is the household overall?**
 
-## Historical actuals
+For overall financial position, use **Balance Sheet**.
 
-The historical portion uses recorded transaction and balance information.
+## Cash Flow table
 
-Use it to identify recurring patterns and unusually large movements. A single month can be affected by annual bills, irregular receipts, or transaction timing, so compare several periods where possible.
+The main table shows several months side by side.
 
-Check the latest actual-data date before assuming the current month is complete.
+### Total Income
 
-## Future projections
+Shows total income received or expected during the month.
 
-Future estimates use planning assumptions such as budgets, expected income, recurring deductions, and other forecasting logic.
+### Less: Non-Bank Income
 
-A projection is an estimate based on those inputs. It should be read together with the date actual data ends and the assumptions supporting future periods.
+Separates income that does not directly increase the bank cash being projected.
 
-Changes in expected receipts, payment timing, or planned spending can change the forecast even when historical actuals remain unchanged.
+This prevents non-cash or separately treated income from overstating available cash.
 
-## Example interpretation
+### Insurance Expenses
 
-Suppose a planning period begins with **$8,000** in cash, receives **$5,000**, and pays out **$6,500**.
+Shows insurance-related cash deductions included in the projection.
 
-**Projected Closing Cash = $8,000 + $5,000 − $6,500 = $6,500**
+### Registered and employer plan deductions
 
-The closing balance remains positive, but the period uses **$1,500** of existing cash. Repeating that pattern would reduce the buffer over time.
+Separate rows can show payroll or other deductions directed to registered or employer savings plans.
 
-Period-end totals also do not prove that sufficient cash was available on every day within the period: a large payment may occur before an expected receipt.
+Examples shown in the report can include:
 
-## Filters and comparisons
+- Canada Life RRSP;
+- Sun Life RESSOP;
+- Sun Life DCP.
 
-Check the selected accounts and dates before comparing periods. A transfer can appear as an outflow when its destination account is outside the selected scope.
+These deductions reduce immediate take-home cash even though the money may still contribute to household savings or investments.
 
-Use consistent selections when comparing actual and projected balances. If a result looks unexpected, inspect the underlying transactions or assumptions before treating it as a change in ordinary spending.
+### Total Deductions
+
+Shows the combined amount deducted before arriving at available in-hand pay.
+
+### In-Hand Pay
+
+Represents the approximate cash remaining after the listed deductions.
+
+This can be more useful for day-to-day planning than gross income.
+
+## Cash outflows
+
+### Prior Month CC Payment Due
+
+Shows the expected cash required to pay credit-card balances resulting from previous spending.
+
+This is important because the cash payment often occurs after the expense itself was incurred.
+
+### Other Cash Items
+
+Shows other relevant cash movements included in the projection.
+
+### Inter-Account Transfers
+
+Shows money moved between household accounts.
+
+A transfer is different from an expense.
+
+Moving $1,000 from a bank account to an investment account reduces available bank cash but does not mean the household spent $1,000 on consumption.
+
+### Total Cash Outflows
+
+Shows the total relevant cash expected to leave the projected available-cash position.
+
+## Net Cash Flows
+
+Shows the expected increase or decrease in cash during the month.
+
+A positive amount indicates that the projected cash position increases during the month.
+
+A negative amount indicates that it decreases.
+
+## Ending Bank Balance
+
+Shows the projected bank balance at the end of each month.
+
+This is one of the most useful figures for forward planning.
+
+## Actual and projected months
+
+Past months use recorded financial activity.
+
+Future months use available assumptions and projections.
+
+Projected months should therefore be treated as planning estimates rather than guaranteed outcomes.
+
+## Inter-Account Transfers
+
+The upper-right table provides additional detail about transfers for the selected month.
+
+It shows:
+
+- account name;
+- amount transferred.
+
+This helps explain months where a large amount of cash appears to move even though it was not actually spent.
+
+## Inter-Account Transfer Distribution
+
+The lower-right chart shows how transfers for the selected month are distributed among accounts.
+
+This can help show whether cash was directed toward:
+
+- investment accounts;
+- registered plans;
+- other savings;
+- other household accounts.
+
+## YoY Cash Position
+
+The **Year-over-Year Cash Position** chart compares the cash position across years.
+
+This provides a longer-term view of whether available cash reserves are generally increasing or decreasing.
+
+## MoM Cash Projection
+
+The **Month-over-Month Cash Projection** chart shows how the cash balance changes across the displayed months.
+
+It can help identify a future month where the projected bank balance becomes unusually low.
+
+## Date filter
+
+The Date filter controls the month used for the transfer detail on the right side of the page.
 
 ## Practical uses
 
-- Review recurring cash surpluses and shortfalls.
-- Identify periods that may consume the existing cash buffer.
-- Compare completed periods with future estimates.
-- Investigate large movements using **Income Expense** and **Category Detail**.
-- Review current financial position on **Balance Sheet**.
+### Look several months ahead
+
+Review **Ending Bank Balance**.
+
+Ask:
+
+> **If the current assumptions hold, will I maintain enough accessible cash through the coming months?**
+
+### Investigate a large change
+
+Review:
+
+- credit-card payment;
+- other cash items;
+- inter-account transfers.
+
+### Understand investment transfers
+
+Use the transfer table and distribution chart to distinguish money moved into savings or investments from true household spending.
+
+### Compare with previous years
+
+Use **YoY Cash Position** to see whether the overall cash buffer is improving.
+
+## Important projection limitation
+
+Future values can differ from actual results because of:
+
+- changes in salary;
+- unexpected expenses;
+- different credit-card spending;
+- changes in contribution amounts;
+- transfers;
+- loan payments;
+- timing differences.
+
+The projection is intended for planning and early warning, not exact prediction.
+
+## Relationship with other pages
+
+Use **Balance Sheet** for overall financial position.
+
+Use **Income & Expenses** for recorded income and spending.
+
+Use **Actual vs Budget** to compare spending against the financial plan.
+
+## Key question answered
+
+> **Will I have enough accessible cash over the next few months?**

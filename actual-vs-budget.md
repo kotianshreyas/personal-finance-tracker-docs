@@ -7,80 +7,133 @@ nav_order: 9
 
 # Actual vs Budget
 
-The **Actual vs Budget** page compares recorded financial activity with the plan for the selected period.
+The **Actual vs Budget** page compares actual financial activity with the monthly budget.
 
-It helps answer:
+It is useful for answering:
 
-1. Where did actual results differ from the budget?
-2. Which differences had the greatest dollar impact?
-3. Does the difference reflect timing, a one-off event, or an ongoing pattern?
+1. Did actual income match expectations?
+2. Which expenses were above or below budget?
+3. Which differences had the largest financial impact?
+4. Did overall savings meet the planned level?
+
+## Comparison table
+
+Each row represents an income or expense category.
+
+The main columns are:
+
+- Actual;
+- Budget;
+- Difference;
+- Budget %.
 
 ## Actual
 
-Actual represents recorded activity included by the current selections.
-
-Check the latest transaction date before interpreting the result. A current period may still be incomplete, particularly when bills or income arrive late in the period.
+Shows the amount actually recorded for the selected month.
 
 ## Budget
 
-Budget represents the planned amount for the relevant period and category.
+Shows the planned amount for the category.
 
-A budget is a planning reference. A difference from it can indicate a change in activity, a timing difference, or an assumption that needs review.
+## Difference
 
-Compare like-for-like periods and account scope. A full-month budget and a partial month's actuals need different interpretation from two completed periods.
+Shows how actual activity differed from budget.
 
-## Understanding variance
+For income, receiving more than budget can be favourable.
 
-A common comparison is:
+For an expense, spending less than budget is generally favourable.
 
-**Difference = Actual − Budget**
+Because income and expenses behave differently, the sign should be interpreted together with the category.
 
-The report's displayed variance may use another sign convention. Check the label and compare the underlying amounts before deciding what a positive or negative result means.
+## Budget %
 
-The financial meaning also depends on the category:
+Shows the size of the difference relative to the budget.
 
-- For expenses, higher actual spending is generally above plan.
-- For income, higher actual receipts are generally above plan in a favourable direction.
+This allows categories of different sizes to be compared.
 
-The same arithmetic sign therefore does not carry the same meaning for income and expenses.
+For example, a $100 difference can be:
 
-## Example: expense comparison
+- very significant against a $150 budget;
+- relatively minor against a $5,000 budget.
 
-Suppose a category has a budget of **$800** and actual expenses of **$950**.
+## Colour indicators
 
-Using Actual minus Budget:
+Colours help identify favourable and unfavourable results.
 
-**Difference = $950 − $800 = $150 above budget**
+Green generally indicates a favourable variance.
 
-Relative to that budget:
+Red generally indicates an unfavourable variance.
 
-**$150 ÷ $800 = 18.75% above budget**
+Always interpret the colour together with the category and amount.
 
-This example illustrates the comparison; use the displayed sign convention for the report's variance column.
+## Zero or missing budget
 
-## Example: income comparison
+Some categories may have actual activity even though no meaningful budget was assigned.
 
-Suppose planned income is **$5,000** and actual income is **$5,200**.
+In those cases, a percentage comparison may be blank or less useful.
 
-Actual income is **$200 above plan**. Although both examples have a positive Actual-minus-Budget difference, the income and expense implications differ.
+The dollar difference can still help identify the unplanned activity.
 
-## Zero or missing budgets
+## Category comparison chart
 
-An actual amount with no corresponding budget deserves review, but a percentage comparison against zero is not meaningful.
+The central chart provides a visual comparison of Actual and Budget amounts across categories.
 
-Check whether a budget was intentionally omitted, whether the category is new, or whether the transaction was assigned to a different category from the plan.
+This helps identify which categories have the greatest dollar impact without reading every table value.
 
-Do not treat a blank budget or percentage as proof that the underlying activity is zero.
+## Net Savings gauge
 
-## Investigating differences
+The gauge on the right compares actual **Net Savings** with the budgeted savings level.
 
-Start with large dollar differences, then review their causes. A large percentage on a tiny budget can matter less than a modest percentage on a major expense.
+This provides an overall summary of whether the month achieved its intended financial result.
 
-Use **Category Detail** to investigate the underlying category and **Income Expense** to understand the wider period result. Use **Cash Flow** when the difference changes expected cash availability.
+A month can be over budget in one category but still achieve the overall savings goal if favourable results elsewhere offset it.
+
+## Date filter
+
+The Date selector determines the period being reviewed.
+
+**Latest** selects the most recent available month.
+
+The date shown near the top of the page identifies the exact reporting period.
 
 ## Practical uses
 
-- Identify categories above or below plan.
-- Separate timing differences from continuing changes.
-- Review budget assumptions using completed-period results.
-- Prioritize differences by dollar impact as well as percentage.
+### Start with overall savings
+
+Check the Net Savings gauge.
+
+Ask:
+
+> **Did I save approximately what I planned to save?**
+
+### Find the largest dollar differences
+
+Review **Difference**.
+
+A large dollar variance often deserves more attention than a dramatic percentage on a very small category.
+
+### Use Budget % for context
+
+After identifying a meaningful dollar difference, use Budget % to understand how large it is relative to the plan.
+
+### Separate one-time events from recurring behaviour
+
+A single unusual month does not necessarily mean the budget is unrealistic.
+
+Repeated differences are more useful when deciding whether:
+
+- behaviour should change;
+- the budget should change;
+- the category should be reviewed.
+
+## Relationship with other pages
+
+Use **Income & Expenses** to compare actual category history across several months.
+
+Use **Income & Expenses: % of Total Income** to understand the category relative to household income.
+
+Use **Category Detail** to investigate the activity behind a category.
+
+## Key question answered
+
+> **Where did my actual financial behaviour differ from my plan?**

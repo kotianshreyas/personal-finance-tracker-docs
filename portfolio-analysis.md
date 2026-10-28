@@ -7,283 +7,282 @@ nav_order: 3
 
 # Portfolio Analysis
 
-The **Portfolio Analysis** page helps you decide which current investments deserve a closer look.
+The **Portfolio Analysis** page helps move from simply viewing investments to evaluating them.
 
-It brings together three perspectives:
+It combines:
 
-- **Performance:** How has the investment performed?
-- **Position size:** How much does it matter to the portfolio?
-- **Recent price behaviour:** Is its price showing strength or weakness?
+- portfolio weight;
+- investment performance;
+- holding age;
+- recent price behaviour;
+- market context;
+- review indicators.
 
-Use the charts for the overall picture and the table for individual details.
+The page does not automatically tell you what to buy or sell.
 
-## Current Holdings ROI
+Its purpose is to help identify investments that may deserve closer attention.
 
-**Current Holdings Return on Investment (ROI)** summarizes the cumulative gain or loss associated with investments you still own.
+## Portfolio summary
 
-It compares their overall investment gain with the amount invested.
+At the top of the page, the report shows **Total Gain %** for the portfolio.
 
-Investments that have been fully exited are excluded from this current-holdings summary.
+This gives a high-level indication of the portfolio's investment result relative to its cost.
 
-For example, 30% means the included investments have generated a cumulative gain equivalent to approximately 30% of their investment cost.
+The page also displays recent movement in major market indexes, including:
 
-This is not a yearly rate. Read it alongside individual investment returns and holding periods.
+- **S&P/TSX Composite** for Canada;
+- **S&P 500** for the United States.
+
+These figures provide general market context.
+
+They are not a direct comparison showing that the portfolio should have produced the same return as either index.
+
+## Analysis views
+
+Two buttons allow the portfolio to be examined from different perspectives:
+
+- **Weight**
+- **Holding Age**
+
+Each circle in the chart represents an investment.
 
 ## Weight view
 
-The **Weight** view compares performance with position size.
+The **Weight** view compares:
 
-### Horizontal position — Portfolio Weight
+**Portfolio Weight**  
+with  
+**Holding Annualized Return**
 
-Investments farther to the right represent a larger percentage of the portfolio.
+### Horizontal position
 
-A holding with 20% weight represents approximately one-fifth of the portfolio. Its performance can have a greater overall effect than a holding with 1% weight.
+Shows how much of the portfolio is represented by the investment.
 
-### Vertical position — Annualized Return
+Investments farther to the right represent larger portfolio positions.
 
-Investments higher on the chart have a higher annualized return.
+### Vertical position
 
-- Above zero indicates a positive annualized result.
-- Below zero indicates a negative annualized result.
+Shows Annualized Return.
 
-Annualized Return expresses performance as a yearly rate while considering when money was invested or received.
+Investments above zero have a positive annualized result.
 
-For short holding periods, the yearly equivalent can be unusually high or low. Check the holding period before drawing conclusions.
+Investments below zero have a negative annualized result.
 
-### Bubble size — Market Value
+### Circle size
 
-Larger bubbles represent investments with greater current value.
+Larger circles make larger or more significant positions easier to identify visually.
 
-This makes the financially significant positions easier to identify.
+## Why Weight matters
 
-### Bubble colour — Current Trend
+The same investment result can matter very differently depending on how large the position is.
 
-Colour describes recent price behaviour:
+For example, a weak investment representing 1% of the portfolio has less effect on the overall portfolio than a weak investment representing 15% or 20%.
 
-| Colour | Trend | Simple interpretation |
-|---|---|---|
-| Green | Strong Trend | Price is above both its shorter-term and longer-term average levels |
-| Orange | Mixed Trend | The shorter-term and longer-term comparisons do not show consistent strength or weakness |
-| Red | Weak Trend | Price is below both its shorter-term and longer-term average levels |
+The Weight view therefore helps answer:
 
-Bubble colour describes price trend. It is different from the Review signal in the table.
-
-For example, an investment can have a green bubble while still deserving review because its overall return remains negative.
+> **Which investment results have the greatest effect on my portfolio?**
 
 ## Holding Age view
 
-The **Holding Age** view replaces portfolio weight on the horizontal axis with the length of time the investment has been held.
+The **Holding Age** view compares:
 
-The other chart features remain:
-
-- annualized return determines vertical position;
-- current market value determines bubble size; and
-- recent price trend determines bubble colour.
+**Holding Age in months**  
+with  
+**Holding Annualized Return**
 
 Investments farther to the right have been held longer.
 
-Use this view to ask:
+This helps distinguish between:
 
-- Is this a new investment experiencing short-term movement?
-- Has a weak result persisted over a longer period?
-- Which long-held investments have generated stronger returns?
+- a newer holding experiencing short-term volatility;
+- an older holding that has shown weak performance for a longer period.
 
-Holding age refers to the current ownership period. Selling an investment completely and later buying it again can begin a new period.
+## Why Holding Age matters
 
-## Chart tooltips
+An investment showing a loss after only a short holding period may simply be experiencing normal short-term market movement.
 
-Hover over a bubble to see the additional information available for that investment.
+A holding that has existed much longer but continues to show weak performance may deserve additional investigation.
 
-Use the tooltip to inspect details without changing the overall chart view.
+Holding age therefore adds context that cannot be obtained from Gain % alone.
 
-Selecting a bubble can also highlight or filter related information in the table.
+## Review table
 
-## Investment analysis table
-
-The table provides a compact comparison of individual investments.
+The lower section provides detailed information for each investment.
 
 ### Review
 
-Review is an attention signal that combines position size, annualized return, and recent price trend.
+The first column summarizes the current review status.
 
-| Signal | How to use it |
-|---|---|
-| High Priority | Start your review here: a meaningful position combines negative return with weak price behaviour |
-| Review | Several factors suggest the investment deserves closer attention |
-| Watch | A negative return or less favourable price trend warrants monitoring |
-| Stable | The available indicators do not trigger a higher review category |
-| Limited Data | There is insufficient return information to complete the assessment |
+Statuses can include:
 
-A position representing at least 2% of the portfolio is treated as meaningful within this screening approach.
+- **Stable**
+- **Watch**
+- **Review**
+- other higher-priority or limited-data classifications where applicable.
 
-Stable does not guarantee that an investment is safe or suitable. Review and High Priority are prompts to investigate, rather than instructions to sell.
+### Stable
 
-### Symbol and Investment
+The investment does not currently show the combination of conditions that would place it on the main review list.
 
-These identify the security or fund.
+### Watch
 
-### Weight
+The investment has characteristics worth monitoring.
 
-Weight shows the investment’s percentage of the portfolio.
+A Watch status does not mean that the investment should be sold.
 
-Use it to distinguish a weak result in a small position from a weak result that materially affects the portfolio.
+### Review
 
-### ROI
+The investment shows stronger reasons for closer investigation.
 
-ROI shows the cumulative gain or loss relative to investment cost.
+Review classifications should be treated as prompts for analysis rather than automatic investment recommendations.
 
-It answers:
+### Symbol
 
-> How much has this investment gained or lost compared with the amount invested?
+The investment's ticker or short identifier.
 
-It does not account for how quickly the result was earned.
+### Investment
+
+The full name of the investment.
+
+### Wt.
+
+The percentage of the portfolio represented by the investment.
+
+### Gain %
+
+Shows the overall gain or loss relative to investment cost.
 
 ### Ann. Return
 
-Annualized Return expresses the investment’s result as a yearly rate, considering the timing of money invested and received.
+Shows investment performance expressed as an annual rate.
 
-It helps compare investments held for different lengths of time.
+This makes comparisons between holdings with different ages more meaningful.
 
-A blank means a usable annualized result is unavailable, rather than zero.
-
-### Day Change
-
-Day Change compares the current available price with an earlier recorded price.
-
-| Display | Meaning |
-|---|---|
-| ▲ Positive percentage | The recorded price increased |
-| ▼ Negative percentage | The recorded price decreased |
-| — | There is no calculated change between the compared prices |
-| Blank | A usable comparison is unavailable |
-
-The comparison is not guaranteed to represent exactly one market trading day.
-
-For some mutual funds, the available price comes from a portfolio snapshot. A dash can therefore mean the recorded price has not changed, rather than confirming that the fund had no market movement.
-
-### Price sparkline
-
-The small line provides a quick view of recorded price movement over approximately the past year.
-
-- **Green:** The final price is higher than the first price shown.
-- **Red:** The final price is lower than the first.
-- **Grey:** The first and final prices are equal.
-
-Read the line’s shape as well as its colour. An investment can finish above its starting price after experiencing a substantial decline along the way.
-
-Some investments have less than a full year of available history.
-
-For snapshot-priced investments, the line may remain flat and then jump when a new price is recorded. A blank line means there is insufficient information to draw it.
-
-The line shows price movement. It does not include the full benefit of investment income, and individual points do not provide hover details.
+## Price-trend comparisons
 
 ### vs 50D
 
-Shows how far the current price is above or below its approximately 50-day average.
-
-- Positive means above the average.
-- Negative means below the average.
-
-Use this as a shorter-term price comparison.
+Compares the current price with its approximate 50-day price trend.
 
 ### vs 200D
 
-Shows how far the current price is above or below its approximately 200-day average.
+Compares the current price with its longer 200-day price trend.
 
-Use this as a longer-term price comparison.
+### vs 52W H
 
-### vs 52W-H
+Compares the current price with its 52-week high.
 
-Shows how far the current price is below its 52-week high.
+These indicators provide context about where the investment currently sits relative to recent prices.
 
-For example, −15% means the current price is approximately 15% below that high.
+They do not predict future performance.
 
-Being below a previous high does not by itself establish that an investment is inexpensive or likely to recover.
+## Insight
 
-### Insight
+The **Insight** column provides a short explanation of why a holding has its current review status.
 
-Insight briefly explains the Review signal.
+It can refer to factors such as:
 
-Common abbreviations include:
+- portfolio weight;
+- positive or negative performance;
+- strong, mixed, or weak price trend.
 
-| Text | Meaning |
-|---|---|
-| wt | Portfolio weight |
-| ann. return | Annualized return |
-| -ve return | Negative return |
-| mix trend | Mixed price trend |
-| 2%+ wt | At least 2% of the portfolio |
+The wording is intentionally compact so that the table remains easy to scan.
 
-For example:
+## Day Change
 
-**“2%+ wt; -ve return; weak trend”**
+Shows the most recently available daily price movement.
 
-means the investment is a meaningful position, has a negative annualized return, and currently shows weak price behaviour.
+Positive changes are shown with an upward indicator and negative changes with a downward indicator.
+
+Some investments may display a dash.
+
+For investments that rely on periodically recorded prices, a dash should not automatically be interpreted as confirmation that the investment's real market value did not move that day.
+
+## 52W Trend
+
+The small chart at the far right shows the recorded price path over approximately the latest 52 weeks where sufficient history is available.
+
+It provides a quick visual indication of whether the holding has generally been:
+
+- rising;
+- falling;
+- moving sideways;
+- volatile.
+
+A green line indicates the latest recorded price is above the beginning of the displayed period.
+
+A red line indicates it is below.
+
+Some investments may have less than a full year of usable price history.
 
 ## Filters
 
-Use the available filters to narrow the analysis.
-
 ### Price Source
 
-Changes the available pricing used for valuation.
-
-A Live selection may still use a recorded portfolio price where an external market price is unavailable.
+Controls the available source used to value investments.
 
 ### Financial Institution
 
-Focuses the analysis on investments associated with the selected institution.
+Limits the page to investments held at a selected institution.
 
 ### Purpose
 
-Focuses on investments assigned to a particular financial purpose.
+Limits the page to investments associated with a particular financial goal.
 
 ### Review
 
-Focuses on investments with a selected attention signal.
+Allows the page to focus on selected review classifications.
 
-For example, use High Priority to begin with investments showing the strongest combination of review factors.
+## Reset and filter controls
 
-Keep selections consistent when comparing results.
+The upper-right controls provide access to page reset and filtering functions.
 
-## Useful analytical perspectives
+Use **Reset** when you want to return to the normal portfolio-wide view.
 
-### Large position with a negative return
+## Practical review process
 
-Start with Weight and Annualized Return.
+### 1. Start with Review status
 
-A disappointing result in a large holding can matter more to the portfolio than a larger percentage loss in a very small holding.
+Look first at investments marked **Review** or **Watch**.
 
-### Strong recent trend with a negative overall result
+### 2. Check portfolio weight
 
-A green bubble can coexist with a negative return.
+A flagged holding that represents a large part of the portfolio deserves more attention than a very small position.
 
-The price may be recovering while the investment remains below the level needed to produce a positive personal result.
+### 3. Compare Gain % and Annualized Return
 
-### Long holding period with weak performance
+Gain % describes the overall result relative to cost.
 
-Switch to Holding Age.
+Annualized Return adds the effect of time.
 
-This helps distinguish a recently purchased investment from one that has remained weak over a much longer period.
+### 4. Check holding age
 
-### Positive return with a weakening trend
+Consider whether the investment is still relatively new or has been held for a long period.
 
-A holding may have performed well overall while its recent price behaviour has weakened.
+### 5. Review price behaviour
 
-Review the sparkline and price comparisons alongside the accumulated return.
+Use:
 
-### Compare the line with your personal return
+- vs 50D;
+- vs 200D;
+- vs 52W H;
+- Day Change;
+- 52W Trend.
 
-The sparkline shows recorded price movement. Your return also depends on when you bought, how much you invested, sales, and income received.
+### 6. Investigate before making a decision
 
-The two should not be expected to match.
+The page identifies areas for review.
 
-## Investigate an investment
+It is not intended to replace a broader investment decision that considers risk, objectives, diversification, taxes, time horizon, and other factors.
 
-1. Use the chart or Review signal to identify a holding.
-2. Read its table row and Insight.
-3. Check position size and holding period.
-4. Where available, right-click and choose **Drill through → Holding Breakdown**.
-5. Review its account distribution and detailed results.
+## Relationship with other pages
 
-This page is intended for reviewing the current portfolio. Check the dates and pricing information before comparing it with historical report pages.
+Use **Portfolio Holdings** for detailed values and gains.
+
+Use **Holding Breakdown** for account-level detail.
+
+Use **Investment Overview** for the overall structure and purpose of the investment portfolio.
+
+## Key question answered
+
+> **Which holdings deserve my attention, and why?**

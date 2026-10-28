@@ -1,79 +1,131 @@
 ---
 layout: default
-title: Income Expense Percent
+title: Income & Expenses - % of Total Income
 parent: Report Pages
 nav_order: 8
 ---
 
-# Income Expense Percent
+# Income & Expenses: % of Total Income
 
-The **Income Expense Percent** page complements the dollar view by helping explain the proportions of income and spending.
+The **Income & Expenses: % of Total Income** page shows monthly financial activity as a percentage of income rather than only as dollar values.
 
-Use percentages to understand relative size, then return to **Income Expense** when you need the underlying dollar amounts.
+This view is useful when income changes from month to month.
 
-## Read the denominator first
+## Why percentages are useful
 
-A percentage always compares an amount with a base:
+Dollar spending can be misleading when monthly income differs substantially.
 
-**Percentage = Amount ÷ Comparison Base × 100**
+For example:
 
-Before interpreting a displayed percentage, check its label and total. An expense as a share of total expenses answers a different question from that same expense as a share of income.
+- spending $700 on groceries during a $12,000 income month has one financial impact;
+- spending the same $700 during a $7,000 income month has a larger impact relative to income.
 
-Do not assume that every percentage on the page uses the same base.
+Percentage view puts the spending in context.
 
-## Share of expenses
+## Income categories
 
-For an expense-mix comparison, the base is total expenses within the selected scope.
+Income categories show their share of total income.
 
-Suppose housing costs **$2,000** and total expenses are **$5,000**:
+For example, if salary represents 97% of income and another source represents 3%, the page makes the composition of total income visible.
 
-**Housing Share of Expenses = $2,000 ÷ $5,000 = 40%**
+## Expense categories
 
-This means housing accounts for 40% of spending. It does not mean housing uses 40% of income.
+Expense categories show the portion of total monthly income consumed by that expense.
 
-## Expenses relative to income
+For example:
 
-For a comparison against income, the base is selected income.
+**Groceries % of Income = Grocery Expense ÷ Total Income**
 
-If the same housing cost is compared with **$8,000** of income:
+This does not mean groceries make up that percentage of total expenses.
 
-**Housing Relative to Income = $2,000 ÷ $8,000 = 25%**
+The denominator is **Total Income**.
 
-Both percentages are valid, but they describe different relationships. These examples explain how to read a percentage; use the report's actual labels to identify the calculation being displayed.
+That distinction is important.
 
-## Percentage changes versus percentage points
+## Monthly table
 
-Suppose a category's share rises from **20%** to **25%**.
+Rows represent the same major categories used on the dollar-based Income & Expenses page.
 
-That is an increase of **5 percentage points**. Relative to its previous share, it is a **25% increase**.
+Columns represent recent months.
 
-Use percentage points when describing the difference between two proportions to avoid confusing these meanings.
+Each value expresses the category relative to total income for that month.
 
-## Filters change the comparison base
+## Net Savings %
 
-A filter can change both the amount and its denominator.
+The bottom row shows **Net Savings %**.
 
-For example, a category can represent a larger percentage after other categories or accounts are excluded, even though its dollar amount has not increased.
+This represents the proportion of income remaining after expenses.
 
-Compare percentages using consistent dates and selections. Check dollar amounts alongside proportions before concluding that spending has risen or fallen.
+For example:
 
-## Small or missing bases
+- 40% means approximately 40 cents of every dollar of income remained after the included expenses;
+- 10% means only approximately 10 cents remained.
 
-A small comparison base can produce a large percentage. If the base is zero or missing, the percentage may not be meaningful.
+## Monthly summary
 
-A blank percentage should not automatically be interpreted as zero activity. Check the underlying amounts and period coverage.
+The right-side summary still provides the selected month's key figures:
 
-Refunds and signed amounts can also make proportions less intuitive, particularly when the total is close to zero.
+- Total Income;
+- Total Expense;
+- Net Savings;
+- Net Savings %.
 
-## Example interpretation
+These allow the percentage table to be interpreted alongside the underlying dollar values.
 
-If a category falls from **30%** to **25%** of spending, its share has declined. Its dollar cost could still have increased if total spending grew faster.
+## Distribution chart
 
-Use **Income Expense** to check the dollars, **Category Detail** to investigate the category, and **Actual vs Budget** to assess it against the plan.
+The lower-right visual shows the composition of the selected month's income and financial result.
+
+Use the labels and centre value to understand what the chart represents before interpreting individual slices.
+
+## Category filter
+
+Use the Category filter to focus on a selected income or expense category.
+
+## Date filter
+
+Controls the month shown in the right-side summary and distribution chart.
+
+**Latest** selects the most recent available month.
+
+## View $
+
+Select **View $** to return to the standard dollar-based Income & Expenses page.
 
 ## Practical uses
 
-- Compare the composition of spending across equivalent periods.
-- Identify categories that dominate the selected total.
-- Distinguish changes in proportions from changes in dollars.
-- Explain percentage results using their comparison base.
+### Compare spending across months with different income
+
+Percentage view removes some of the distortion caused simply by having a higher or lower income month.
+
+### Identify lifestyle pressure
+
+If a recurring expense consumes an increasing percentage of income, its financial burden may be increasing even if its dollar amount changes only slightly.
+
+### Compare savings efficiency
+
+Use the **Net Savings %** row to compare what proportion of income was retained each month.
+
+## Important interpretation
+
+A high percentage does not always indicate a problem.
+
+For example:
+
+- a large education expense may be intentional;
+- travel may be planned;
+- one-time purchases can create temporary spikes.
+
+Use the percentage view to identify questions for investigation rather than judging a category in isolation.
+
+## Relationship with other pages
+
+Use **Income & Expenses** for the corresponding dollar amounts.
+
+Use **Actual vs Budget** to determine whether the spending was planned.
+
+Use **Category Detail** when more detailed investigation is needed.
+
+## Key question answered
+
+> **How much of my income is being consumed by each category?**

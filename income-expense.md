@@ -1,82 +1,187 @@
 ---
 layout: default
-title: Income Expense
+title: Income & Expenses
 parent: Report Pages
 nav_order: 7
 ---
 
-# Income Expense
+# Income & Expenses
 
-The **Income Expense** page explains income and spending over the selected period.
+The **Income & Expenses** page shows household income and spending across recent months in dollar amounts.
 
-Use it to understand how much came in, how much was spent, and which categories contributed to the result.
+It is useful for answering:
+
+1. How much income was received each month?
+2. How much was spent?
+3. Which spending categories were the largest?
+4. How much remained as net savings?
+5. How has each category changed from month to month?
+
+## Monthly table
+
+Rows represent income and expense categories.
+
+Columns represent months.
+
+Examples shown in the report include:
+
+- Salary;
+- Government Grants;
+- Other Income;
+- Capital Gain / Loss;
+- Groceries & Pantry Supplies;
+- Restaurant Meals;
+- Leisure & Entertainment;
+- Clothing & Accessories;
+- Car Expenses;
+- Grooming & Personal Care;
+- Gifts & Contributions;
+- Home Appliances & Kitchenware;
+- Travel & Transportation Costs;
+- Learning & Development;
+- Electronics & Gadgets;
+- Mobile Phone;
+- Home Internet Service;
+- Insurance Expenses;
+- Gym Expenses;
+- Electricity;
+- Subscription Services;
+- Medical Expenses;
+- Commission & Trading Fees;
+- Bank Service Charges;
+- Furniture & Fixtures;
+- Interest on Loan;
+- Rent Expense.
+
+Categories can be expanded where additional detail is available.
 
 ## Income
 
-Income represents receipts classified as income in the tracked data.
+Income categories appear as positive amounts.
 
-Read the category labels and selected period before comparing totals. An irregular receipt can make one month look unusually strong without changing the normal recurring pattern.
+Examples include:
 
-A receipt into an account is not automatically income: transfers and borrowing need to be distinguished from earnings.
+- Salary;
+- Government Grants;
+- Other Income.
 
 ## Expenses
 
-Expenses represent transactions classified as spending.
+Expense categories are shown as negative amounts.
 
-Category assignments determine how spending is grouped. If a result looks surprising, inspect the underlying transactions before interpreting the category as a change in behaviour.
+This makes the direction of money clear:
 
-Refunds or reversals can reduce recorded expense. A negative category amount can therefore need a different interpretation from an ordinary spending total.
+- positive values increase the month's financial result;
+- negative values reduce it.
 
-## Income less expenses
+## Capital Gain / Loss
 
-When expense totals are expressed as positive spending amounts:
+Capital Gain / Loss can appear separately from ordinary salary and everyday expenses.
 
-**Period Surplus / Deficit = Income − Expenses**
+It should not automatically be interpreted as recurring household income.
 
-A positive result means recorded income exceeds recorded expenses within the selected scope. A negative result means expenses exceed income.
+## Total
 
-If the report displays signed negative expenses, use the displayed convention when reconciling the total.
+The bottom row shows the overall result for each month.
 
-## Example
+When income exceeds expenses, the result is positive.
 
-Suppose a completed month shows:
+This represents the amount remaining after the included income and expenses.
 
-| Measure | Example |
-|---|---:|
-| Income | $6,000 |
-| Housing | $2,000 |
-| Food | $800 |
-| Transport | $400 |
-| Other expenses | $1,300 |
-| Total expenses | $4,500 |
-| Surplus | $1,500 |
+## Monthly summary
 
-The surplus describes income relative to expenses. It does not necessarily equal the change in a bank balance, because transfers, investment purchases, debt movements, and other cash transactions can also affect that balance.
+The upper-right summary provides a focused view of the selected month.
 
-## Comparing periods
+### Total Income
 
-Use equivalent periods wherever possible. A partial current month is not directly comparable with a completed prior month.
+Total income included for that month.
 
-Consider both the amount and its cause. A large annual bill can create a temporary spike. A smaller increase repeated every month can have a greater continuing effect.
+### Total Expense
 
-Keep account and owner selections consistent so a change in scope is not mistaken for a change in income or spending.
+Total expenses for the month.
 
-## Reading category totals
+### Net Savings
 
-Start with overall income and expenses, then investigate the largest categories and unusual changes.
+The difference between total income and total expenses.
 
-For each category, ask:
+In simple terms:
 
-- Is the amount recurring or exceptional?
-- Is the period complete?
-- Are refunds, reversals, or classification changes involved?
-- Does the selected scope include all relevant accounts?
+**Net Savings = Total Income − Total Expenses**
 
-Use **Category Detail** for a closer review. Use **Income Expense Percent** to compare proportions and **Actual vs Budget** to compare recorded activity with the plan.
+### Net Savings %
+
+Shows the portion of income that remained after expenses.
+
+In simple terms:
+
+**Net Savings % = Net Savings ÷ Total Income**
+
+## Expense distribution
+
+The lower-right donut chart shows how the selected month's expenses are divided among categories.
+
+Larger sections represent categories responsible for a larger portion of total spending.
+
+This makes it easier to identify the main drivers of household expenses.
+
+## Category filter
+
+The Category filter allows a selected category to be investigated.
+
+Use it when you want to focus on one area of income or spending.
+
+## Date filter
+
+The Date filter determines the month summarized in the right-side visuals.
+
+**Latest** shows the most recent available month.
+
+## View %
+
+Select **View %** to open the percentage-based view.
+
+That view expresses categories relative to total income rather than only as dollar amounts.
+
+## Why both dollars and percentages matter
+
+Dollar amounts answer:
+
+> **How much did I spend?**
+
+Percentages answer:
+
+> **How significant was that spending relative to my income?**
+
+Both views provide useful but different information.
 
 ## Practical uses
 
-- Understand the main sources of income and spending.
-- Identify repeated deficits or unusually high expense periods.
-- Separate recurring patterns from one-off events.
-- Investigate category changes before adjusting a budget.
+### Review recent spending
+
+Compare the same category across several months.
+
+### Identify unusually high expenses
+
+Look for a month where a category differs substantially from its normal pattern.
+
+### Review savings
+
+Use **Net Savings** and **Net Savings %** to determine how much income remained after spending.
+
+### Understand expense composition
+
+Use the donut chart to identify the categories responsible for the largest share of spending.
+
+## Relationship with other pages
+
+Use **Income & Expenses: % of Total Income** to compare categories relative to income.
+
+Use **Actual vs Budget** to compare actual results with planned amounts.
+
+Use **Category Detail** when additional category-level investigation is required.
+
+Use **Cash Flow** when the question concerns available bank cash rather than income and expense recognition.
+
+## Key question answered
+
+> **Where is my monthly income going?**

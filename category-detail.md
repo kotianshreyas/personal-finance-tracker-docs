@@ -7,70 +7,101 @@ nav_order: 10
 
 # Category Detail
 
-The **Category Detail** page supports closer investigation of an income or expense category.
+The **Category Detail** page provides a closer look at a selected income or expense category.
 
-Use it after a summary raises a question, such as an unusually large expense, a change in spending share, or a difference from budget.
+It is intended to support investigation when a result on another page raises a question.
 
-## Establish the selected context
+Examples include:
 
-Before reading the details, check the category, date range, and account selections.
+- an expense that appears unusually high;
+- a category that is significantly over budget;
+- a category whose monthly pattern has changed;
+- a total that needs to be understood in more detail.
 
-The result describes that context. A category total for one account or owner may differ substantially from the same category across all tracked accounts.
+## Opening the page
 
-If you arrive from another page through a report interaction, confirm that the category and period match what you intended to investigate.
+Where drill-through is available:
 
-## Category totals
+1. Select the category you want to investigate.
+2. Open the drill-through menu.
+3. Choose **Category Detail**.
+4. The page opens already filtered to that category.
 
-A category total groups the recorded activity assigned to that category within the selected scope.
+## Why drill-through is useful
 
-The total alone does not explain the cause. It may combine recurring payments, occasional purchases, refunds, and corrections.
+Summary pages are designed to show patterns.
 
-Where a category includes subcategories, distinguish the parent total from its components. Adding both the parent and the component amounts would double-count the same activity.
+They cannot show every underlying detail at the same time.
 
-## Reviewing underlying activity
+Category Detail allows you to move from:
 
-Where transaction-level details are available, examine the dates, descriptions, accounts, and amounts associated with the result.
+> **What happened?**
 
-Useful questions include:
+to:
 
-- Does the category contain the transactions you expected?
-- Is one large item responsible for most of the change?
-- Are similar payments recurring more often?
-- Are refunds or reversals reducing the net amount?
-- Could transaction classification explain the result?
+> **What activity caused it?**
 
-A description or category assignment helps explain a transaction, but unusual items may still need checking against the source record.
+## Selected category
 
-## Example reconciliation
+The page retains the category selected on the source page so that the detailed information remains focused on the item being investigated.
 
-Suppose a selected category includes two purchases of **$120** and **$80**, together with a **$30 refund**.
+## Transaction-level investigation
 
-When purchases are expressed as positive expense amounts:
+Depending on the selected category and available report data, the detailed view can help identify:
 
-**Net Expense = $120 + $80 − $30 = $170**
+- when activity occurred;
+- which transactions contributed to the total;
+- whether one unusually large transaction caused the change;
+- whether the category contains many smaller recurring transactions;
+- whether the activity appears consistent with the intended classification.
 
-The net total is lower than gross purchases. This does not mean only $170 of purchases occurred; the refund offsets part of the original spending.
+## Monthly patterns
 
-Use the report's displayed sign convention when reconciling the rows.
+Where a time-based visual is available, use it to determine whether the category:
 
-## Understanding period changes
+- is normally stable;
+- has seasonal changes;
+- contains occasional spikes;
+- has recently increased or decreased.
 
-Compare equivalent date ranges before concluding that behaviour has changed.
+## Comparing with summary pages
 
-An annual payment, a delayed bill, or a purchase near month-end can shift a category total without changing the longer-term pattern.
+A high monthly total can have very different explanations.
 
-Review several periods and the individual drivers where available. A repeated small increase can be more persistent than a single large item.
+For example:
 
-## Relationship with summary pages
+### One large transaction
 
-Use **Income Expense** for dollar totals, **Income Expense Percent** for proportions, and **Actual vs Budget** for the planning comparison.
+A category may be unusually high because of one exceptional purchase.
 
-If the category detail does not reconcile with a summary, first compare filters, dates, and category scope. Different selections can produce different totals from the same data.
+### Several smaller transactions
 
-## Practical uses
+The same total could instead result from many recurring purchases.
 
-- Explain unusual category totals.
-- Separate recurring activity from exceptional items.
-- Understand the effect of refunds and classification.
-- Reconcile a summary result with its supporting activity.
-- Gather context before revising a budget.
+These situations may require different decisions.
+
+Category Detail helps distinguish between them.
+
+## Classification review
+
+If a transaction appears unexpected, consider whether it has been assigned to the correct category.
+
+A category total can be misleading if an unrelated transaction has been classified incorrectly.
+
+## Returning to the source page
+
+Use the report's Back navigation to return to the page from which the category was selected.
+
+## Relationship with other pages
+
+Use **Income & Expenses** to identify changes over time.
+
+Use **Income & Expenses: % of Total Income** to understand the category's financial significance.
+
+Use **Actual vs Budget** to identify budget differences.
+
+Use **Category Detail** to investigate the underlying activity.
+
+## Key question answered
+
+> **What is causing the result I am seeing for this category?**

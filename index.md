@@ -4,41 +4,63 @@ title: Home
 nav_order: 1
 ---
 
-# Personal Finance Tracker
+# Personal Finance Tracker User Guide
 
-A Power BI-based personal finance analytics solution designed to track investments, cash flow, spending, budgeting, net worth, and contribution limits in one integrated model.
+This guide explains how to read and use the main pages of the **Personal Finance Tracker** Power BI report.
 
-This documentation explains how to use the report, how to interpret each visual, and how the key calculations work.
+It is written from the user's point of view and focuses on:
 
-## What this guide covers
+- what each page shows;
+- what the main figures mean;
+- how to use filters and navigation;
+- how the pages relate to one another;
+- how to investigate results that deserve more attention.
 
-- How to navigate the report
-- How to interpret each report page
-- Portfolio and investment analysis
-- Cash flow and forecasting
-- Income and expense analysis
-- Budget tracking
-- Contribution tracking
-- Calculation methodology
-- Assumptions and limitations
-- Glossary of financial and analytical terms
+The guide does not require knowledge of Power BI development, data modelling, or the technical processes behind the report.
 
-## Report sections
+## Start here
 
-### Portfolio
-Understand current holdings, portfolio performance, investment concentration, holding age, return, and review signals.
+If you are new to the report, begin with **Getting Started**.
 
-### Personal Finance
-Track net worth, cash flow, income, expenses, budgets, and spending patterns.
+It explains:
 
-### Planning
-Monitor registered-account contributions and future financial projections.
+- report navigation;
+- dates;
+- filters;
+- expandable tables;
+- drill-through;
+- common colour conventions;
+- a suggested financial review sequence.
 
-## About the data
+## Report Pages
 
-The public documentation uses demonstration data only. Personal financial information from the production model is not included.
+The **Report Pages** section contains a separate guide for each major area of the Power BI report:
 
----
+1. Portfolio Holdings
+2. Holding Breakdown
+3. Portfolio Analysis
+4. Investment Overview
+5. Balance Sheet
+6. Cash Flow
+7. Income & Expenses
+8. Income & Expenses: % of Total Income
+9. Actual vs Budget
+10. Category Detail
+11. Spending Insights
+12. Contribution Tracker
 
-**Personal Finance Tracker**  
-Power BI User Guide and Methodology
+## Using the guide
+
+You do not need to read every page in sequence.
+
+Open the section that matches the financial question you are trying to answer.
+
+For example:
+
+- **What is my net worth?** → Balance Sheet
+- **What investments do I own?** → Portfolio Holdings
+- **Which investments deserve attention?** → Portfolio Analysis
+- **Where is my income going?** → Income & Expenses
+- **Am I staying within budget?** → Actual vs Budget
+- **Will I have enough cash?** → Cash Flow
+- **How much contribution room remains?** → Contribution Tracker

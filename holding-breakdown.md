@@ -7,286 +7,156 @@ nav_order: 2
 
 # Holding Breakdown
 
-The **Holding Breakdown** page provides a focused view of an individual investment.
+The **Holding Breakdown** page lets you examine one investment in more detail.
 
-Unlike the Portfolio Holdings page, which compares many investments at once, Holding Breakdown is intended to answer:
+Use it to understand:
 
-> **What does this particular investment represent within my portfolio, and what should I know about it?**
-
-The page is designed primarily as a **drill-through page**. This means it normally receives the selected investment automatically from another report visual.
-
----
+- where the investment is held;
+- its value and performance across accounts; and
+- how much of your portfolio it represents.
 
 ## Opening the page
 
-The most useful way to access Holding Breakdown is through **Drill through** from an investment elsewhere in the report.
+Open this page from an investment elsewhere in the report:
 
-For example:
+1. Right-click the investment.
+2. Select **Drill through**.
+3. Choose **Holding Breakdown**.
 
-1. Locate an investment on the **Portfolio Holdings** or **Portfolio Analysis** page.
-2. Right-click the investment.
-3. Select **Drill through**.
-4. Choose **Holding Breakdown**.
+The selected investment is carried into the detail page.
 
-Power BI carries the selected investment into the Holding Breakdown page.
+Check the investment name at the top before interpreting the results.
 
-This allows the page to focus specifically on that security without requiring the user to manually locate it again.
+## Account breakdown
 
----
+The account table helps you understand how the selected investment is distributed across your accounts.
 
-## Selected investment context
+For example, the same fund might be held in both a retirement account and a savings account. Reviewing the accounts separately shows where its value and gains are located.
 
-Once the page is opened through drill-through, the selected symbol becomes the context for the page.
+### Market Value
 
-The measures and visuals shown on the page are therefore calculated specifically for that investment.
+The estimated value of the units held in that account.
 
-For example, if **RY — Royal Bank of Canada** is selected before drilling through, the Holding Breakdown page shows information relating to RY rather than the portfolio as a whole.
+**Market Value = Units Owned × Price**
 
-> Always check the selected investment shown on the page before interpreting the results.
+### Remaining Cost
 
----
+The purchase cost associated with the units you still own.
 
-## Portfolio position
+This is different from the total amount ever spent on the investment, because some units may already have been sold.
 
-One of the key purposes of this page is to show how significant the selected investment is relative to the entire portfolio.
+### Unrealized Gain
 
-### Selected Investment
+The gain or loss on units still owned.
 
-Represents the current market value of the investment being examined.
+**Unrealized Gain = Market Value − Remaining Cost**
 
-The value uses the currently selected pricing method.
+For example, units that cost $3,000 and are now worth $3,600 have an unrealized gain of $600.
 
-Conceptually:
+### Realized Gain
 
-**Selected Investment Value = Quantity Held × Selected Price**
+The profit or loss on units already sold.
 
-### Rest of Portfolio
+For example, units that cost $1,000 and were sold for $1,200 generated a $200 realized gain, before any additional costs.
 
-Represents the combined market value of all other investments in the portfolio.
+The full $1,200 sale proceeds are not profit: $1,000 represents the recovery of the original investment.
 
-Conceptually:
+### Income
 
-**Rest of Portfolio = Total Portfolio Value − Selected Investment Value**
+Income received from the investment, such as dividends, interest, or other investment distributions.
 
-Together, these two values make up the full investment portfolio.
+### Total Gain
 
----
+The overall dollar result combines:
 
-## Portfolio share visual
+**Total Gain = Realized Gain + Unrealized Gain + Investment Income**
 
-The portfolio comparison visual divides the portfolio into:
+This shows the complete investment result rather than only the change in value of the units still owned.
 
-- **Selected Investment**
-- **Rest of Portfolio**
+### Gain %
 
-This provides an immediate visual indication of how concentrated the portfolio is in the selected security.
+Gain % expresses the total gain or loss relative to the associated purchase cost.
 
-#### Example
+It is a cumulative percentage, rather than a yearly rate.
 
-Suppose:
+Do not add account percentages together. A combined percentage depends on the amounts invested in the different accounts.
 
-- Selected investment market value = **$30,000**
-- Total portfolio market value = **$300,000**
+## Selected Investment and Rest of Portfolio
 
-The selected investment represents:
+The portfolio-share visual compares:
 
-**$30,000 ÷ $300,000 = 10%**
+- **Selected Investment** — the value of the investment being examined.
+- **Rest of Portfolio** — the value of the other investments included in the portfolio comparison.
 
-The visual would therefore show approximately:
+Together, they show how significant this holding is within your portfolio.
 
-- Selected Investment — **10%**
-- Rest of Portfolio — **90%**
+### Example
 
----
+If the selected investment is worth $30,000 within a $300,000 portfolio:
+
+| Portion | Value | Share |
+|---|---:|---:|
+| Selected Investment | $30,000 | 10% |
+| Rest of Portfolio | $270,000 | 90% |
+
+This means approximately one-tenth of the portfolio is invested in that holding.
 
 ## Portfolio Weight
 
-Portfolio Weight expresses the selected investment's current market value as a percentage of the total investment portfolio.
+Portfolio Weight is the selected investment’s share of the portfolio.
 
-Conceptually:
+**Portfolio Weight = Investment Value ÷ Portfolio Value**
 
-**Portfolio Weight = Selected Investment Market Value ÷ Total Portfolio Market Value**
+A larger weight means the investment has more influence on the portfolio’s overall results.
 
-This is useful because the same investment performance can have very different consequences depending on position size.
+For example, a 20% decline in a holding representing 1% of the portfolio has a much smaller effect than the same decline in a holding representing 20%.
 
-#### Example
-
-Consider two investments that both decline by 20%.
-
-**Investment A**
-
-- Portfolio weight: 1%
-- Approximate effect on total portfolio: relatively small
-
-**Investment B**
-
-- Portfolio weight: 20%
-- Approximate effect on total portfolio: much more significant
-
-Portfolio Weight therefore provides context for investment risk and concentration.
-
----
-
-## Why portfolio concentration matters
-
-A large investment is not automatically undesirable.
-
-However, the larger an investment becomes as a percentage of the portfolio, the greater its influence on overall portfolio results.
-
-A heavily concentrated holding can cause the portfolio to:
-
-- benefit substantially when that investment performs well
-- decline substantially when that investment performs poorly
-- become more dependent on one company, fund, asset class, or investment strategy
-
-The Holding Breakdown page therefore helps distinguish between:
-
-> **How well is this investment performing?**
-
-and
-
-> **How important is this investment to the overall portfolio?**
-
-Both questions matter.
-
----
+A large weight does not automatically make an investment unsuitable. It tells you that its performance matters more to the overall portfolio.
 
 ## Price Source
 
-Where available, the page uses the same **Price Source** logic as the rest of the portfolio report.
+Where the Price Source selection is available:
 
-### Live
+- **Live** uses available market pricing, with a recorded portfolio price used when a market price is unavailable.
+- **AceMoney** uses the portfolio snapshot price.
 
-Uses the current available market price.
+Changing the price source can change market value, gains, and portfolio weight.
 
-If a live market price is unavailable for an investment, the model can use the available portfolio snapshot price as a fallback.
+Use a consistent price source when comparing this page with other portfolio pages.
 
-### AceMoney
+## How to use the page
 
-Uses the investment price recorded in the portfolio snapshot.
+### Understand where a holding is located
 
-Because the selected investment value and the total portfolio value both depend on valuation, changing the Price Source can change:
+Compare the account rows to see how the investment is spread across accounts.
 
-- selected investment market value
-- total portfolio value
-- portfolio weight
-- portfolio allocation percentages
+This can help explain why the investment’s overall result differs from the result shown in one particular account.
 
----
+### Separate past results from the remaining holding
 
-## Understanding selected pricing
+Read Realized Gain, Unrealized Gain, and Income separately.
 
-The portfolio comparison is based on the **selected pricing method** rather than mixing valuation sources.
+An investment can have:
 
-This is important because portfolio weight should compare values calculated on a consistent basis.
+- a gain on units already sold;
+- a loss on units still owned; and
+- income received along the way.
 
-For example, if Live pricing is selected:
+Total Gain brings those results together.
 
-1. the selected investment is valued using the available live price;
-2. the portfolio is valued using the same selected-pricing logic; and
-3. the investment's portfolio percentage is calculated from those values.
+### Review concentration
 
-This keeps the selected investment and the rest of the portfolio comparable.
+Use Portfolio Weight and the portfolio-share visual to judge how strongly this investment can affect the portfolio.
 
----
+Consider position size alongside performance rather than judging the investment from its return alone.
 
-## Relationship with Portfolio Holdings
+### Continue an investigation
 
-The **Portfolio Holdings** page answers:
+A useful review sequence is:
 
-> What investments do I own and how have they performed?
+1. Use **Portfolio Analysis** to identify an investment.
+2. Open **Holding Breakdown**.
+3. Review its account distribution and gains.
+4. Consider its share of the portfolio.
 
-The **Holding Breakdown** page answers:
-
-> What does this specific investment look like when examined individually?
-
-Use Portfolio Holdings for broad comparison.
-
-Use Holding Breakdown when one particular investment deserves closer examination.
-
----
-
-## Relationship with Portfolio Analysis
-
-The **Portfolio Analysis** page is designed for screening and comparison.
-
-It helps identify holdings based on factors such as:
-
-- portfolio weight
-- annualized return
-- holding age
-- market value
-- current price trend
-- Review classification
-
-Holding Breakdown is the logical next step when one of those investments deserves closer examination.
-
-A typical workflow is therefore:
-
-**Portfolio Analysis → identify investment → Holding Breakdown → investigate further**
-
----
-
-## Example interpretation
-
-Suppose an investment has:
-
-- Market Value: **$50,000**
-- Total Portfolio Value: **$300,000**
-- Portfolio Weight: **16.7%**
-
-This means approximately one-sixth of the investment portfolio is concentrated in this single holding.
-
-That does not by itself indicate whether the investment is good or bad.
-
-Instead, consider the weight together with information such as:
-
-- ROI
-- annualized return
-- current trend
-- holding age
-- investment purpose
-- diversification across the rest of the portfolio
-
-A 16.7% position with strong long-term performance may have a very different interpretation from a 16.7% position experiencing persistent weak performance.
-
----
-
-## What the page does not tell you
-
-Portfolio Weight measures **concentration**, not investment quality.
-
-A large portfolio weight does not automatically mean:
-
-- the investment should be sold
-- the portfolio is inappropriate
-- the investment is too risky
-
-Likewise, a small portfolio weight does not automatically mean an investment is safe or suitable.
-
-The appropriate concentration depends on factors that may not be fully represented in the report, including:
-
-- investment objectives
-- time horizon
-- risk tolerance
-- diversification outside the tracked portfolio
-- tax considerations
-- personal financial circumstances
-
-The page should therefore be used as an **analytical tool**, not as an automated investment recommendation.
-
----
-
-## Practical uses
-
-The Holding Breakdown page can be used to:
-
-- investigate a specific investment selected elsewhere in the report
-- understand its current dollar value
-- measure its share of the total portfolio
-- identify portfolio concentration
-- compare one holding with the remainder of the portfolio
-- understand how pricing assumptions affect its valuation
-- provide additional context before making investment decisions
-
-For comparison across all investments, return to **Portfolio Holdings** or **Portfolio Analysis**.
+Return to **Portfolio Holdings** when you want to compare it with other investments.

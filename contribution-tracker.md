@@ -7,66 +7,171 @@ nav_order: 12
 
 # Contribution Tracker
 
-The **Contribution Tracker** page supports reviewing registered-account contributions and available room.
+The **Contribution Tracker** helps monitor contributions, withdrawals, and available room for registered savings and investment accounts.
 
-Use it to understand what has been recorded, which person and account type it relates to, and which figures need reconciliation with the relevant records.
+The page supports plan types such as:
 
-## Select the person, account type, and period
+- **RRSP — Registered Retirement Savings Plan**
+- **TFSA — Tax-Free Savings Account**
+- **FHSA — First Home Savings Account**
 
-Contribution information needs to be read in the correct context.
+It is useful for answering:
 
-Check the owner, registered-account type, and reporting period before comparing totals. Contributions across different people or account types should not be treated as one interchangeable allowance.
+1. How much contribution room was available?
+2. How much room has been used?
+3. How much room remains according to the report?
+4. When did contributions and withdrawals occur?
+5. How were contributions divided among the registered plans?
 
-A date filter also needs careful interpretation: a calendar period in the report may not represent every period relevant to an account's contribution rules.
+## Selecting a person
 
-## Recorded contributions
+Use the person icons near the top of the page to select the account owner.
 
-Recorded contributions represent the activity classified as contributions in the tracked data.
+The report changes to show information for the selected person.
 
-They are different from market value. Investment gains can increase an account's value without adding a contribution; investment losses can reduce its value without reversing a recorded contribution.
+## Selecting a plan
 
-Reinvested income, transfers, withdrawals, and corrections also need their appropriate classification. Do not infer contribution activity solely from changes in account balance.
+Use the plan buttons to choose:
 
-## Available room
+- RRSP;
+- TFSA;
+- FHSA.
 
-A room figure depends on the opening information and the contribution-related adjustments included in the calculation.
+The main room summary changes with the selected plan.
 
-A simplified reconciliation is:
+## Starting Room
 
-**Remaining Room = Starting Room + Included Adjustments − Counted Contributions**
+Shows the contribution room available at the beginning of the applicable period according to the information stored in the tracker.
 
-This is a way to understand the components, not a statement of the report's exact formula or a rule shared by every registered account type.
+## Room Used
 
-Use the relevant account-specific information to understand what is included and when an adjustment takes effect.
+Shows the contribution room consumed by recorded contributions.
 
-## Example reconciliation
+## Remaining Room
 
-Suppose a tracking example starts with **$10,000** of room, includes **$2,000** of additional room, and counts **$4,500** of contributions.
+Shows the estimated contribution room that remains.
 
-Under those stated assumptions:
+In simple terms:
 
-**Remaining Room = $10,000 + $2,000 − $4,500 = $7,500**
+**Remaining Room = Starting Room − Room Used**
 
-The example assumes there are no other adjustments. It does not establish the applicable limit or withdrawal treatment for a particular registered account.
+subject to the contribution-room rules applicable to the selected plan.
 
-## Withdrawals and transfers
+## Contribution-room gauge
 
-Do not assume that every withdrawal immediately restores contribution room or that every incoming transfer is a new contribution.
+The vertical gauge provides a visual indication of how much of the available room has been used.
 
-The classification, timing, and account type matter. Review how the source records describe the movement and reconcile it with the applicable account records before interpreting its effect on room.
+This makes it easier to see when an account is approaching its tracked limit.
 
-## Reconcile coverage and freshness
+## Monthly Contribution Activity
 
-A report can only include activity present in its data and selected scope.
+The table shows contribution and withdrawal activity by month.
 
-Check the last update date, opening-room inputs, adjustments, and contributions across all relevant institutions. Activity outside the tracked accounts can make the report's remaining-room figure incomplete.
+Typical columns include:
 
-Where a result differs from an official record, investigate the dates and included activity rather than assuming the difference is available room.
+- Month;
+- Contribution;
+- Withdrawal.
+
+The total row summarizes the selected activity.
+
+## Why contributions and withdrawals are shown separately
+
+A withdrawal does not necessarily reverse contribution-room usage immediately.
+
+The treatment depends on the type of registered account.
+
+For that reason, contributions and withdrawals should be reviewed separately rather than simply netted together.
+
+## Activity range
+
+The right side allows a start and end date to be selected.
+
+The contribution chart updates to reflect the selected period.
+
+## Contributions for selected range
+
+The pie chart compares contributions made to the registered plans during the selected date range.
+
+It can show how total contributions were divided among:
+
+- RRSP;
+- TFSA;
+- FHSA.
+
+Both dollar values and percentages can be used to understand the allocation of registered savings.
+
+## TFSA withdrawals
+
+A TFSA withdrawal generally does not create new contribution room immediately.
+
+The withdrawn amount is generally restored to contribution room in the following calendar year.
+
+For example, an amount withdrawn during 2026 generally becomes available again as contribution room in 2027, subject to the applicable rules.
+
+## RRSP withdrawals
+
+RRSP withdrawals generally do not restore contribution room in the same way that TFSA withdrawals do.
+
+Because different registered plans have different rules, the plan type should always be considered before interpreting a withdrawal.
+
+## FHSA considerations
+
+FHSA contribution room follows its own rules and limits.
+
+The tracked room should therefore be interpreted specifically as FHSA room rather than assuming that TFSA or RRSP rules apply.
+
+## Official contribution room
+
+The Contribution Tracker is an internal monitoring tool based on the information available to the report.
+
+It should not be treated as a replacement for official Canada Revenue Agency records.
+
+Before making a contribution that could bring a plan close to its maximum available room, confirm the official contribution information and applicable rules.
+
+## Over-contributions
+
+Contributing more than the available room can create tax consequences.
+
+The tracker is intended to make potential room pressure easier to identify before that happens.
 
 ## Practical uses
 
-- Review recorded contributions by owner and account type.
-- Distinguish contributions from investment performance.
-- Reconcile room inputs and recorded activity.
-- Identify missing transactions or adjustments for review.
-- Organize the information needed to check a contribution plan against current account records.
+### Review room before contributing
+
+Select:
+
+1. the correct person;
+2. the correct registered plan.
+
+Then review **Remaining Room**.
+
+### Understand how room was used
+
+Review **Monthly Contribution Activity**.
+
+### Compare savings across plans
+
+Select an activity range and review the contribution-distribution chart.
+
+### Investigate an unexpected number
+
+Check:
+
+- the selected owner;
+- the selected plan;
+- the activity dates;
+- recorded contributions;
+- recorded withdrawals.
+
+## Relationship with other pages
+
+Use **Balance Sheet** to see the current value of registered-plan assets as part of the household financial position.
+
+Use **Investment Overview** and **Portfolio Holdings** to review how the contributed funds are invested.
+
+The Contribution Tracker focuses on **contribution activity and room**, not investment performance.
+
+## Key question answered
+
+> **How much have I contributed, and how much registered-plan contribution room remains according to the tracker?**

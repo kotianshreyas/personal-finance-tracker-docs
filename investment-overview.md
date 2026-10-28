@@ -7,73 +7,169 @@ nav_order: 4
 
 # Investment Overview
 
-The **Investment Overview** page is the starting point for understanding the investment portfolio as a whole.
+The **Investments Overview** report page provides a high-level picture of how the investment portfolio is organized.
 
-Use it to answer three questions:
+It focuses on:
 
-1. How much is the portfolio worth?
-2. Where is the portfolio allocated?
-3. Which part of the portfolio should I investigate next?
+- where investments are held;
+- how much is invested;
+- how much cash is held inside investment accounts;
+- what the money is intended for;
+- how the portfolio is distributed among investments.
 
-Read this page alongside **Portfolio Holdings**, which explains individual investments, and **Portfolio Analysis**, which supports screening and comparison.
+## Investment account table
 
-## Portfolio value
+The table on the left groups investments by financial institution and account.
 
-Portfolio market value represents the estimated value of the investments still held.
+The hierarchy can be expanded to see more detail.
 
-Conceptually:
+### Financial Institution
 
-**Holding Market Value = Quantity Held × Selected Price**
+Shows the organization where the investment account is held.
 
-The portfolio value is the sum of the included holdings' market values. Its scope depends on the current selections, so check the accounts and owners included before comparing totals.
+Examples can include banks, insurance companies, investment dealers, and other financial institutions.
 
-Market value is different from cumulative Invested cost. An investment can have a high purchase cost but a lower current value after sales or price changes.
+### Account
 
-## Cost, cash returned, and performance
+Expanding an institution shows the investment accounts held there.
 
-The portfolio documentation distinguishes these measures:
+### Investment
 
-| Measure | How to read it |
-|---|---|
-| Invested | Cumulative purchase cost, including applicable fees and reinvestments |
-| Yield | Cash returned through income and sales |
-| Market Value | Estimated value of remaining holdings |
-| Return | Total dollar gain or loss |
-| ROI | Cumulative Return relative to Invested cost |
-| Annualized Return | Performance expressed as a yearly rate using cash-flow timing |
+Expanding an account shows the investments contained within it.
 
-Use the label on each summary before interpreting its value. A dollar return, cumulative ROI, and annualized rate answer different questions.
+This structure makes it possible to move from the overall institution level down to individual holdings.
 
-## Understanding allocation
+## Qty
 
-Allocation describes how the included portfolio value is distributed. For any allocation breakdown shown, read each amount relative to its total.
+Shows the number of units or shares held where applicable.
 
-For example, if investments worth **$60,000** belong to one group within a **$300,000** selected portfolio:
+## Mkt Value
 
-**Allocation = $60,000 ÷ $300,000 = 20%**
+Shows the current market value of investments.
 
-Changing the selected portfolio can change the percentage even when the group's dollar value stays the same.
+## Cash
 
-A large allocation indicates concentration. It does not by itself explain whether the investments are performing well.
+Shows cash currently held inside the investment account.
 
-## Pricing and filters
+This is important because an investment account can contain both:
 
-Where **Price Source** is available, Live uses available current pricing with the documented snapshot fallback; AceMoney uses portfolio snapshot pricing.
+- invested securities;
+- uninvested cash.
 
-For comparisons, keep the pricing method and selected accounts consistent. Check the valuation date as well: market-price changes and changes in account scope can both affect the total.
+## Balance
 
-Use the available filters to move from an overall view to the accounts, owners, institutions, or purposes you want to examine.
+Shows the combined account value represented in the report.
 
-## Example interpretation
+In simple terms, an investment account balance is generally made up of:
 
-Suppose the selected portfolio has a market value of **$300,000**, and one holding is worth **$45,000**.
+**Investment Market Value + Cash held in the account**
 
-That holding represents **15%** of the selected portfolio. To understand it further, review its cost and performance on **Portfolio Holdings**, compare it with other holdings on **Portfolio Analysis**, and use **Holding Breakdown** for focused investigation.
+## Total row
+
+The total row provides an overall view of:
+
+- invested market value;
+- investment-account cash;
+- combined investment balance.
+
+## Plan Allocation
+
+The **Plan Allocation** chart shows how investment assets are assigned to financial purposes.
+
+Examples shown in the report can include:
+
+- Home Buying;
+- Retirement;
+- Education;
+- Emergency funds.
+
+This is different from looking only at account type.
+
+Two investment accounts may be structurally similar but be intended for completely different goals.
+
+The chart helps answer:
+
+> **What is this investment money intended to accomplish?**
+
+## Why purpose matters
+
+A portfolio balance should not always be viewed as one pool of freely interchangeable money.
+
+For example:
+
+- retirement assets may need to remain invested for decades;
+- home-buying funds may be needed much sooner;
+- education savings have a different intended use;
+- emergency funds prioritize accessibility and stability.
+
+Understanding purpose gives the portfolio values more meaning.
+
+## Portfolio Distribution
+
+The **Portfolio Distribution** chart shows how the investment portfolio is divided among individual holdings.
+
+A larger slice represents a larger position.
+
+This can help identify portfolio concentration.
+
+For example, if one or two investments make up a large portion of the entire portfolio, movements in those investments can have a greater effect on the overall result.
+
+For exact values and performance figures, use **Portfolio Holdings**.
+
+## Filters
+
+### Price Source
+
+Controls the available source used to value investments.
+
+### Purpose of funds
+
+Shows investments associated with a selected financial objective.
+
+### Account Owner
+
+Shows investments belonging to the selected owner.
+
+### Account Type
+
+Allows particular types of investment accounts to be reviewed separately.
+
+## Current price information
+
+The page shows when current prices were last refreshed.
+
+Different investments may have different levels of price availability, so not every holding should be expected to update in exactly the same way.
 
 ## Practical uses
 
-- Establish the size and scope of the investment portfolio.
-- Review allocation before investigating individual securities.
-- Separate current value from historical investment performance.
-- Compare views using consistent accounts and pricing.
-- Identify the next report page to investigate.
+### Review where assets are held
+
+Use the expandable institution table to understand how much is held with each provider.
+
+### Check investment-account cash
+
+Review the **Cash** column.
+
+A high cash balance may be intentional, but this page makes it visible.
+
+### Review financial purpose
+
+Use **Plan Allocation** to determine how investment assets are divided among major goals.
+
+### Look for concentration
+
+Use **Portfolio Distribution** to identify unusually large positions.
+
+Then move to **Portfolio Holdings** or **Portfolio Analysis** for more detailed review.
+
+## Relationship with other pages
+
+Use **Portfolio Holdings** for detailed individual investment results.
+
+Use **Portfolio Analysis** to review performance and market context.
+
+Use **Balance Sheet** to see investments together with all other assets and liabilities.
+
+## Key question answered
+
+> **How is my investment portfolio organized, and what is the money intended for?**

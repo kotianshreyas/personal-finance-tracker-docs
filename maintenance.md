@@ -4,469 +4,320 @@ title: Maintenance & Troubleshooting
 nav_order: 4
 ---
 
-# Maintenance & Troubleshooting
+# Maintenance
 
-This page explains how the Personal Finance Tracker is maintained, what happens automatically, how to trigger refreshes manually, and what to check when something does not update as expected.
-
-It is intended as an operational reference.
-
-For normal report usage, use the **Getting Started** and **Report Pages** sections of the User Guide.
+This page explains how the Portfolio Analysis report is updated, when you may need to refresh it manually, and what to check if the information appears out of date.
 
 ---
 
-## System at a glance
+## How the system works
 
-The current process is:
+The report is updated through a mostly automatic process:
 
-**AceMoney → Google Drive → GitHub Actions → Google Drive outputs → Power BI**
+**Source files**  
+↓  
+**Automated pipeline**  
+↓  
+**Processed files in Google Drive**  
+↓  
+**Automatic Power BI refresh**  
+↓  
+**Updated Portfolio Analysis report**
 
-Each part has a separate role:
+The pipeline prepares the information Power BI needs. Once the pipeline finishes successfully, it automatically asks Power BI to refresh the report.
 
-- **AceMoney** — transaction entry and portfolio snapshot source.
-- **Google Drive** — stores source files and processed outputs.
-- **GitHub Actions** — runs the processing pipeline.
-- **Power BI** — refreshes and displays the analytical report.
-
-These are separate systems.
-
-A problem in one part does not automatically corrupt the others.
-
----
-
-# Routine workflow
-
-## What you normally do
-
-### 1. Enter transactions in AceMoney
-
-Enter transactions normally as they occur.
-
-This remains the manual source-entry step in the current system.
-
-### 2. Export updated transaction data when needed
-
-When you want recent transactions to appear in Power BI:
-
-1. In AceMoney, go to:
-
-   **Tools → Options**
-
-2. Make sure **Show closed accounts** is enabled.
-
-3. Go to:
-
-   **Reports → General reports → Transactions by criteria**
-
-4. Select the required date range.
-
-5. Make sure:
-
-   - **Show subtotals** is unchecked.
-   - **Include transfers** is checked.
-
-6. Export the report to the Transactions-Inbox folder.
-
-7. Rename the file using the month and year format used by the existing process, for example:
-
-   `Oct 2026.csv`
-
-### 3. Export Portfolio.csv when investment holdings change
-
-Export the latest `Portfolio.csv` from AceMoney to the Portfolio Snapshot folder when updated investment holdings or prices need to be reflected.
+This means the normal update process does not depend on Power BI refreshing at a predetermined time before the pipeline has finished.
 
 ---
 
-# Supporting maintenance files
+## Normal daily operation
 
-Some source files are maintained manually and only need to be updated when the underlying information changes.
+Under normal circumstances, no manual action is required.
 
-These include:
+The pipeline is scheduled to run twice each day.
 
-- `account_list.csv`
-- `Budget.csv`
-- `Category_master.csv`
-- `Contribution_limits.csv`
-- `Credit_Card_Limits.csv`
-- `Targets.csv`
-- `Opening_Balances.csv`
-- `Salary_Rates.csv`
-- `CarLoanSchedule.csv`
+### Intraday run — 8:15 AM
 
-You do not need to edit all of these during a normal refresh.
+The first run is intended to update the report during market trading hours.
 
-Update only the file affected by the change.
+It refreshes items such as:
 
----
+- transactions;
+- current investment prices;
+- exchange rates;
+- account information; and
+- market information.
 
-# What happens automatically
+### Closing run — 2:15 PM
 
-The GitHub pipeline runs automatically twice each day.
+The second run captures the later market position after market close.
 
-The current authoritative schedule is:
+It performs the regular updates and also updates investment price history.
 
-- **Midday run:** 17:15 UTC
-- **Closing run:** 22:15 UTC
+> Scheduled times are target times. GitHub may occasionally start a scheduled run later than the displayed time.
 
-The Closing run additionally updates portfolio price history.
-
-The pipeline reads source files from Google Drive, processes them, and writes updated output files back to the Pipeline-Outputs folder.
-
-Power BI refreshes separately from the pipeline.
-
-The pipeline and the Power BI semantic-model refresh should therefore be treated as two distinct processes.
+The important point is that Power BI now waits for the pipeline to finish. Once the pipeline has successfully produced the new files, the Power BI refresh is triggered automatically.
 
 ---
 
-# Pipeline outputs
+## Power BI safety refreshes
 
-The main processed output files are:
+Power BI also has two scheduled fallback refreshes:
 
-## `prices.csv`
+- **1:30 PM**
+- **11:30 PM**
 
-Contains current investment prices and available market metadata.
+These are safety nets.
 
-It can also contain fallback pricing for investments where an independent current price is unavailable.
-
-## `transactions_master.csv`
-
-Contains the consolidated transaction history used by the report.
-
-## `account_list_enriched.csv`
-
-Contains account classifications such as:
-
-- account type;
-- financial institution;
-- owner;
-- purpose.
-
-## `price_history.csv`
-
-Contains portfolio investment price history.
-
-This is updated during the Closing pipeline run.
-
-## `fx_rates.csv`
-
-Contains daily USD/CAD exchange-rate history.
-
-## `market_history.csv`
-
-Contains separate market-index history used for market context.
-
-Current indexes include:
-
-- S&P/TSX Composite;
-- S&P 500.
-
-## `refresh_log.csv`
-
-Records successful pipeline runs.
-
-This file is used by the report to display pipeline-run information.
+They are not the main method used to keep the report current. Their purpose is to give Power BI another opportunity to reload the latest available files if an automatic API refresh was missed or interrupted.
 
 ---
 
-# Manual refresh
+## Pipeline Runs Today
 
-Manual refresh is useful when you do not want to wait for the next scheduled cycle.
+The Process & Architecture page contains a **Pipeline Runs Today** indicator.
 
-## Refresh Pipeline
+This shows the number of successful pipeline runs recorded for the current day.
 
-Use the **Refresh Pipeline** button on the Power BI System Status & Maintenance page to open the GitHub pipeline workflow.
+It does **not** show the number of Power BI refreshes.
 
-When running the pipeline manually, choose the appropriate run type:
-
-### Midday
-
-Use for a normal current-data refresh.
-
-### Closing
-
-Use when you also want the portfolio price-history update included.
-
-Wait until the GitHub Actions run completes successfully before expecting new pipeline outputs.
+For example, Power BI may refresh automatically after a pipeline run and may also perform a scheduled safety refresh, while the Pipeline Runs Today number remains unchanged.
 
 ---
 
-## Refresh Dataset
+## Manual refresh options
 
-Use the **Refresh Dataset** button to open the Power BI Service area used to refresh the semantic model.
+There are two different manual actions because they perform different jobs.
 
-The Power BI refresh is separate from the GitHub pipeline.
+### Refresh Pipeline
 
-A successful pipeline run does not by itself guarantee that the Power BI report has already loaded the new outputs.
+Use **Refresh Pipeline** when the underlying information itself may need to be updated.
+
+Examples:
+
+- you added or changed transactions;
+- a source file was updated;
+- you want fresh market prices;
+- you want to rerun the normal automated process.
+
+The button opens the GitHub Portfolio Pipeline.
+
+Run the workflow and select the appropriate run type.
+
+A successful pipeline run will automatically trigger the Power BI refresh afterward.
+
+You normally do **not** need to run the pipeline and then separately click Refresh Dataset.
 
 ---
 
-# Pipeline Runs Today
+### Refresh Dataset
 
-The report can display how many successful pipeline runs have been recorded today.
+Use **Refresh Dataset** when the processed files are already current but Power BI needs to reload them.
 
-This number reflects **pipeline runs**, not confirmed Power BI semantic-model refreshes.
+Examples:
 
-It should therefore be interpreted as:
+- the pipeline has already completed successfully;
+- the Google Drive output files are current;
+- the report still appears to show the previous data;
+- you specifically want a Power BI-only refresh.
 
-> **How many successful pipeline runs have been logged today?**
+This button opens the semantic model in the **Personal Finance Analytics** workspace.
 
-It should not be interpreted as an authoritative count of Power BI refresh capacity already consumed.
+Use the Power BI refresh option from there.
+
+Because this refresh does not run the pipeline first, it will simply reload whatever processed files are currently available.
 
 ---
 
-# Power BI Desktop changes
+## Which refresh should I use?
 
-You only need Power BI Desktop when modifying the report itself.
+| Situation | Recommended action |
+|---|---|
+| Transactions or source files changed | **Refresh Pipeline** |
+| You want newer market prices | **Refresh Pipeline** |
+| You want to reproduce the normal daily process | **Refresh Pipeline** |
+| Pipeline already completed but report still looks old | **Refresh Dataset** |
+| Processed files are known to be current | **Refresh Dataset** |
+| Everything looks current | No action required |
 
-Examples include:
+When in doubt, **Refresh Pipeline** is the more complete process because Power BI refreshes automatically afterward.
 
-- creating or changing report pages;
-- changing visuals;
-- changing measures;
-- changing formatting;
-- modifying model logic.
+---
 
-Normal data updates do not require Power BI Desktop.
+## Checking whether a refresh succeeded
+
+### Check the pipeline
+
+Open the Portfolio Pipeline in GitHub Actions.
+
+A successful complete run should show a green success status.
+
+The workflow now covers both:
+
+1. preparing the data; and
+2. refreshing Power BI.
+
+Therefore, a successful workflow means the full automated process completed successfully.
+
+If Power BI fails to refresh, the overall workflow should also show a failure rather than incorrectly reporting the process as complete.
+
+### Check Power BI
+
+In the **Personal Finance Analytics** workspace:
+
+1. Find the **Portfolio Analysis** semantic model.
+2. Open its refresh history.
+3. Review the most recent refresh.
+
+Automatic pipeline-triggered refreshes appear as **Via Api**.
+
+Manual refreshes normally appear as **On demand**.
+
+Scheduled safety refreshes appear as **Scheduled**.
+
+---
 
 ## Publishing report changes
 
-When report design changes are complete:
+Changes made in Power BI Desktop are separate from normal data refreshes.
 
-1. Open `Portfolio Analysis ver4.pbix`.
-2. Make the required changes.
-3. Publish the report to the existing Power BI workspace.
-4. Replace the existing published model/report when prompted.
-5. Open the report in Power BI Service.
-6. Confirm that the changes appear correctly.
+If you change:
 
-Publishing report-design changes is different from refreshing report data.
+- visuals;
+- page layouts;
+- measures;
+- formatting;
+- navigation; or
+- report design,
 
----
+save the PBIX file and publish it to the **Personal Finance Analytics** workspace.
 
-# Common limitations
+Publishing replaces the report/model version in that workspace.
 
-## Manual AceMoney export
-
-The transaction export remains a manual dependency.
-
-If new transactions are entered in AceMoney but no updated export is placed in Google Drive, the pipeline can still run successfully using older transaction data.
-
-A successful pipeline run therefore does not prove that all recent AceMoney activity was exported.
+A normal data refresh does not publish Desktop design changes.
 
 ---
 
-## Investment price availability
+## Current workspace
 
-Not every investment has the same type of current price source.
+The active report is published in:
 
-Some mutual funds and other investments may use portfolio-snapshot pricing when an independent daily price cannot be retrieved reliably.
+**Personal Finance Analytics**
 
-For those holdings:
+This is the workspace used by the automated pipeline refresh.
 
-- Day Change may show a dash;
-- price-history charts can contain flat periods followed by jumps;
-- available history can be shorter than a full year.
+The older copy in **My workspace** is currently being retained as a temporary rollback copy.
 
-Do not interpret a dash as proof that the real investment price did not change.
+Its scheduled refresh is disabled, so it should not be treated as the active report.
 
 ---
 
-## Contribution tracking
+## Troubleshooting
 
-The Contribution Tracker is an internal monitoring tool.
+### Pipeline Runs Today shows 0
 
-Official Canada Revenue Agency records remain authoritative for registered-plan contribution room.
+Possible explanations:
 
-This is particularly important when:
+- the scheduled pipeline has not run yet;
+- the scheduled GitHub run was delayed;
+- the pipeline failed; or
+- the report has not yet loaded the latest refresh-log information.
 
-- contribution room is nearly exhausted;
-- withdrawals affect future room;
-- first-60-days RRSP contributions need tax-year interpretation;
-- account records differ from official CRA information.
-
----
-
-## Refresh counts
-
-The pipeline-run log and Power BI refresh history are not the same thing.
-
-If you need to verify whether Power BI itself refreshed successfully, check the refresh history in Power BI Service.
+Check GitHub Actions first.
 
 ---
 
-# Troubleshooting
+### The report shows old information
 
-## Pipeline Runs Today shows 0
+First determine whether the pipeline has completed.
 
-Possible reasons include:
+If the pipeline has **not** completed:
 
-- today's scheduled GitHub Actions run has not occurred yet;
-- the pipeline failed;
-- `refresh_log.csv` was not updated;
-- Power BI has not refreshed since the new log entry was created.
+**Run Refresh Pipeline.**
 
-### What to check
+If the pipeline completed successfully but Power BI still shows old information:
 
-1. Open the GitHub repository.
-2. Go to **Actions**.
-3. Open the latest **Portfolio Pipeline** run.
-4. Check whether it completed successfully.
+**Run Refresh Dataset.**
 
 ---
 
-## Pipeline succeeded but Power BI still shows old data
+### A transaction is missing
+
+Check that the transaction exists in the source export and that the relevant source file has been updated.
+
+Then run **Refresh Pipeline**.
+
+If the transaction still does not appear, investigate the pipeline output rather than repeatedly refreshing Power BI.
+
+---
+
+### An account appears as Not Defined
+
+The account may not yet have a matching account classification.
+
+Check the account source information and update the account mapping where required.
+
+Then rerun the pipeline.
+
+---
+
+### GitHub shows a failed workflow
+
+Open the failed workflow and review the failed step.
 
 Possible causes include:
 
-- the Power BI semantic model has not refreshed yet;
-- the refresh failed;
-- the report is displaying an older cached state;
-- the source export itself was stale.
+- source-file or Google Drive problems;
+- market-data retrieval problems;
+- Microsoft authentication problems; or
+- a Power BI refresh failure.
 
-### What to check
-
-1. Confirm the pipeline completed successfully.
-2. Confirm the required source file was updated before the pipeline ran.
-3. Check Power BI Service refresh history.
-4. Refresh the report page after the semantic-model refresh completes.
+Because Power BI refresh is now part of the workflow, a failure near the end of the workflow may relate to Power BI rather than the data-processing stage.
 
 ---
 
-## New transaction is missing from Power BI
+### Power BI shows a failed refresh
 
-Check the process in this order:
+Open the semantic-model refresh history and review the error details.
 
-1. Was the transaction entered in AceMoney?
-2. Was an updated transaction export created?
-3. Was that export saved to the correct Google Drive folder?
-4. Did the pipeline run after the export was uploaded?
-5. Did Power BI refresh after the pipeline completed?
+If the pipeline itself completed successfully, the processed files may already be current.
 
-The first missing step usually identifies the cause.
+In that situation, a Power BI-only **Refresh Dataset** may be sufficient after the underlying issue has cleared.
 
 ---
 
-## New account appears as Not Defined
+### Investment prices appear unchanged
 
-The pipeline can discover a new account that is not yet fully classified.
+Not every investment has a reliable live daily price source.
 
-If this occurs:
+Some mutual funds may continue to use the latest available portfolio price instead.
 
-1. Update `account_list.csv`.
-2. Add the correct account details, such as:
-   - financial institution;
-   - owner;
-   - purpose;
-   - account type.
-3. Run the pipeline again.
-
-The updated classification should be picked up on the next successful run.
+A flat daily change or flat section of a trend line therefore does not necessarily mean the investment itself had no market movement.
 
 ---
 
-## GitHub Actions failure
+## Routine maintenance
 
-If GitHub sends a failure notification:
+Most day-to-day use should require no maintenance.
 
-1. Open the repository.
-2. Go to **Actions**.
-3. Open the failed run.
-4. Expand the failed step.
-5. Read the error message.
+The main items to keep current are:
 
-Possible causes can include:
+- transaction/source exports;
+- account information;
+- supporting planning files when values change; and
+- the PBIX report when report design changes are made.
 
-- temporary external price-source issues;
-- authentication problems;
-- malformed source data;
-- missing source files.
-
-Do not assume a failed pipeline means historical data was lost.
-
-A failure generally means the new outputs were not refreshed successfully.
+The automated pipeline handles routine processing and Power BI refreshes.
 
 ---
 
-## Power BI shows an unexpected balance
+## Important points to remember
 
-Before assuming the calculation is wrong, check:
-
-- selected date;
-- owner filter;
-- account filter;
-- price source;
-- whether the latest transaction export was included;
-- whether the latest Power BI refresh completed.
-
-For investment balances, also consider whether the investment uses a current market price or a fallback snapshot price.
-
----
-
-## Day Change is blank or shows a dash
-
-This is common for holdings that do not have a reliable independent daily market price.
-
-A dash means no meaningful calculated day change is available from the recorded price data.
-
-It does not necessarily mean the investment's actual market price was unchanged.
-
----
-
-# System references
-
-Keep the main system links available in this section.
-
-## GitHub
-
-Portfolio pipeline repository:
-
-`portfolio-pipeline`
-
-Documentation repository:
-
-`personal-finance-tracker-docs`
-
-## Google Drive
-
-The Google Drive structure contains:
-
-- source transaction exports;
-- portfolio snapshots;
-- maintenance files;
-- pipeline outputs.
-
-## Power BI
-
-The published Power BI report is the main analytical interface.
-
-The report and its semantic model can refresh separately from the GitHub pipeline.
-
----
-
-# What is not currently automated
-
-The current system deliberately still requires some manual steps.
-
-These include:
-
-- entering transactions in AceMoney;
-- exporting transaction data from AceMoney;
-- exporting `Portfolio.csv` when required;
-- maintaining selected supporting CSV files;
-- publishing report-design changes from Power BI Desktop;
-- confirming official tax contribution room from CRA records.
-
-The system is designed to automate processing and reporting after the source data has been supplied.
-
----
-
-# When to use the Power BI Maintenance page
-
-Use the **System Status & Maintenance** page in Power BI when you need to:
-
-- check whether the pipeline has run;
-- see the latest available status information;
-- trigger a manual pipeline run;
-- open the Power BI refresh controls;
-- open this Maintenance & Troubleshooting guide.
-
-For detailed instructions, troubleshooting, and reference information, use this page instead of keeping long technical instructions inside the Power BI report.
+- The pipeline normally runs twice each day.
+- Power BI refreshes automatically after a successful pipeline run.
+- Power BI also has two scheduled safety refreshes.
+- **Pipeline Runs Today** counts pipeline runs, not Power BI refreshes.
+- Use **Refresh Pipeline** when the underlying data needs updating.
+- Use **Refresh Dataset** only when the processed files are already current.
+- Report design changes still require publishing from Power BI Desktop.
+- The active report is in the **Personal Finance Analytics** workspace.
